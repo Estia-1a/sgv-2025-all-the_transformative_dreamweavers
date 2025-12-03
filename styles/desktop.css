@@ -3,8 +3,15 @@
 }
 #Ecriture h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
+    font-size: x-large;
 }
 #Ecriture p1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#Ecriture2 h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+#Ecriture2 p1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
