@@ -1,6 +1,9 @@
 #top_footer {
     display: flex;  
     justify-content: flex-start;
+    background-color: #eff3f1;
+    height: 300px;
+    
 }
 #Reseaux_sociaux {
     background-color: #00a97a;
@@ -10,7 +13,7 @@
     width: 250px;
     flex-direction: column;
     gap: 50px;
-    height: 500px;
+    height: 400px;
 }
 #Logo img{  
     width: auto;  
@@ -46,6 +49,15 @@
     font-size: 20px;
 }
 #Nous_Contacter {
+    align-items: center;
+    display: flex;  
+    justify-content: flex-start;
+    margin-left: 50px;
+    flex-direction: column;
+    gap: 20px;
+    margin-top:75px;
+
+
 }
 #Ecriture2 h1 {
     font-family: Georgia, 'Akrobat', Times, serif;
@@ -71,7 +83,8 @@
     height: 50px;
     cursor: pointer;
     transition: 0.3s;
-    border: none;
+    border: none;       
+    gap: 20px;
 }
 .btn-contact:hover {
     background-color: #074735;
