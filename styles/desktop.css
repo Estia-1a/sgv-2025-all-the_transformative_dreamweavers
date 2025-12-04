@@ -1,16 +1,23 @@
+#top_footer {
+    display: flex;  
+    justify-content: flex-start;
+}
 #Reseaux_sociaux {
     background-color: #00a97a;
     padding: 16px;
     display: flex;
     justify-content: flex-start;
     width: 250px;
+    flex-direction: column;
+    gap: 50px;
+    height: 500px;
 }
 #Logo img{  
     width: auto;  
 }
 #Logo {   
     display: flex;  
-    align-items: center;         
+    justify-content: flex-start;         
     gap: 20px;
     background-color: #00a97a;
 }
@@ -23,28 +30,39 @@
 #LogoFacebook img{
     width: 50px   
 }
+
+#Ecriture {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 #Ecriture h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: x-large;
+    font-family: Georgia, 'Akrobat', Times, serif;
+    font-size: 40px;
 }
 #Ecriture p1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Akrobat', Times, serif;
+    font-size: 20px;
+}
+#Nous_Contacter {
 }
 #Ecriture2 h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Akrobat', Times, serif;
     font-size: x-large;
 }
 #Ecriture2 p1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Akrobat', Times, serif;
 }
 #Contacter {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Akrobat', Times, serif;
     font-size: large;
     color: whitesmoke;
     text-decoration: none;
 }
 .btn-contact {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Akrobat', Times, serif;
+    font-weight: 800;
     display: flex;
     justify-content: center;
     align-items: center;
