@@ -16,13 +16,14 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #Contacter {
-     font-family: Georgia, 'Times New Roman', Times, serif;
-     font-size: large;
-     color: whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    color: whitesmoke;
+    text-decoration: none;
 }
 .btn-contact {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
-
     justify-content: center;
     align-items: center;
     background-color: #00a97a;
@@ -30,5 +31,8 @@
     height: 50px;
     cursor: pointer;
     transition: 0.3s;
-    border: none;  
+    border: none;
+}
+.btn-contact:hover {
+    background-color: #074735;
 }
