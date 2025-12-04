@@ -1,5 +1,27 @@
-#Logo img {
+#Reseaux_sociaux {
+    background-color: #00a97a;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    width: 250px;
+}
+#Logo img{  
+    width: auto;  
+}
+#Logo {   
+    display: flex;  
+    align-items: center;         
+    gap: 20px;
+    background-color: #00a97a;
+}
+#LogoX img{
     width: 50px;
+}
+#Logo img:hover {
+    transform: scale(1.05);
+}
+#LogoFacebook img{
+    width: 50px   
 }
 #Ecriture h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
