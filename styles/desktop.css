@@ -1,3 +1,4 @@
+                                        /*Partie footer Haut */
 #top_footer {
     display: flex;  
     justify-content: flex-start;
@@ -88,4 +89,11 @@
 }
 .btn-contact:hover {
     background-color: #074735;
+}
+                                         /*Partie Footer BAS*/
+#lien_utile {
+    display: flex;  
+    justify-content: center;
+    margin-left: 50px;
+    gap: 40px;
 }
