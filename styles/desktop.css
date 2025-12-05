@@ -31,11 +31,17 @@ header a {
 }
 
                                         /*Partie footer Haut */
+body {
+    margin: 0;
+    padding: 0;
+}                                 
+                                       /*Partie footer Haut */
 #top_footer {
     display: flex;  
     justify-content: flex-start;
     background-color: #eff3f1;
     height: 300px;
+    margin: 0;
     
 }
 #Reseaux_sociaux {
@@ -102,7 +108,7 @@ header a {
 #Contacter {
     font-family: Georgia, 'Akrobat', Times, serif;
     font-size: large;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 .btn-contact {
@@ -127,5 +133,65 @@ header a {
     display: flex;  
     justify-content: center;
     margin-left: 50px;
-    gap: 40px;
+    gap: 100px;
+    background-color: #00a9793c;
+    font-family: Georgia, 'Akrobat', Times, serif;
+    font-weight: 500;
+    margin: 0;
 }
+.colonne li {
+    gap: 100px;
+    margin-bottom: 20px;
+}
+.colonne h4 {
+    margin-bottom: 60px;
+    font-size: 20px;
+    font-weight: 800;
+}
+#information {
+    display: flex;  
+    justify-content: center;
+    margin-left: 50px;
+    background-color: #00a9793c;
+    margin: 0;
+    list-style: none;
+    font-weight: 800;
+    
+}
+#barre_navigation {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-top: 50px;
+
+}
+#barre_navigation li {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: Georgia, 'Akrobat', Times, serif;
+}
+li {
+    list-style: none;
+    display: flex;
+}
+                                         /*Partie Footer final*/
+#parseval {
+    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+
+}
+#un {
+    font-weight: 600;
+    width: 400px;
+    margin-left: 20px;
+}
+#deux {
+    font-weight: 600;
+    width: 400px;
+    text-align: right;
+    margin-right: 20px ; 
+}
+
