@@ -1,9 +1,14 @@
-                                        /*Partie footer Haut */
+body {
+    margin: 0;
+    padding: 0;
+}                                 
+                                       /*Partie footer Haut */
 #top_footer {
     display: flex;  
     justify-content: flex-start;
     background-color: #eff3f1;
     height: 300px;
+    margin: 0;
     
 }
 #Reseaux_sociaux {
@@ -96,4 +101,23 @@
     justify-content: center;
     margin-left: 50px;
     gap: 40px;
+    background-color: #00a9793c;
+}
+#information {
+    display: flex;  
+    justify-content: center;
+    margin-left: 50px;
+    gap: 40px;
+    background-color: #00a9793c;
+    margin: 0;
+}
+#barre_navigation {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+#barre_navigation li {
+    display: inline-block;
+    margin-right: 20px;
 }
