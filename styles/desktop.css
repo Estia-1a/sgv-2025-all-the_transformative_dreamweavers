@@ -1,0 +1,30 @@
+/* Style général (optionnel) */
+header div {
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+header a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Masquer les bandeaux secondaires au départ */
+#BandeauPart,
+#BandeauPro {
+    display: none;
+    background: #e5e5e5;
+}
+
+/* Affichage au survol */
+
+/* Quand on survole "Particuliers" */
+#Bandeau1 a[href="Particuliers.html"]:hover ~ #BandeauPart {
+    display: block;
+}
+
+/* Quand on survole "Professionnels" */
+#Bandeau1 a[href="Professionnels.html"]:hover ~ #BandeauPro {
+    display: block;
+}
