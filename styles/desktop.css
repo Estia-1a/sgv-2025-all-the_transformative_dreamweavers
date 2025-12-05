@@ -100,16 +100,18 @@ body {
     display: flex;  
     justify-content: center;
     margin-left: 50px;
-    gap: 40px;
+    gap: 100px;
     background-color: #00a9793c;
+    font-family: Georgia, 'Akrobat', Times, serif;
 }
 #information {
     display: flex;  
     justify-content: center;
     margin-left: 50px;
-    gap: 40px;
     background-color: #00a9793c;
     margin: 0;
+    list-style: none;
+    
 }
 #barre_navigation {
     display: flex;
@@ -120,4 +122,8 @@ body {
 #barre_navigation li {
     display: inline-block;
     margin-right: 20px;
+    font-family: Georgia, 'Akrobat', Times, serif;
+}
+li {
+    list-style: none;
 }
