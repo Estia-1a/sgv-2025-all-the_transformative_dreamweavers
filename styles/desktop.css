@@ -51,7 +51,7 @@ body {
     justify-content: flex-start;
     width: 250px;
     flex-direction: column;
-    gap: 50px;
+    gap: 10px;
     height: 400px;
 }
 #Logo img{  
@@ -83,7 +83,7 @@ body {
     font-family: Georgia, 'Akrobat', Times, serif;
     font-size: 40px;
 }
-#Ecriture p1 {
+#Ecriture p {
     font-family: Georgia, 'Akrobat', Times, serif;
     font-size: 20px;
 }
@@ -102,10 +102,16 @@ body {
     font-family: Georgia, 'Akrobat', Times, serif;
     font-size: x-large;
 }
-#Ecriture2 p1 {
+#Ecriture2 p {
     font-family: Georgia, 'Akrobat', Times, serif;
 }
 #Contacter {
+    font-family: Georgia, 'Akrobat', Times, serif;
+    font-size: large;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+#Contacter1 {
     font-family: Georgia, 'Akrobat', Times, serif;
     font-size: large;
     color: rgb(0, 0, 0);
@@ -145,6 +151,7 @@ body {
 }
 .colonne h4 {
     margin-bottom: 60px;
+    margin-left: 37px;
     font-size: 20px;
     font-weight: 800;
 }
