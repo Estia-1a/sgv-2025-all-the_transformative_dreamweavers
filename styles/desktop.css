@@ -18,6 +18,7 @@ header a {
     display: inline-block;
     align-items: center;
     height: 70px;
+    font-family: 'Poppins', sans-serif;
 }
 #Professionnels {
     border-left: 1px solid #eff3f1;
@@ -34,13 +35,19 @@ header a {
     margin: 0;
     height: 50px;
     display: flex;
-    align-items: center;
+    align-items: center;  
 }
-/* Masquer les bandeaux secondaires au départ */
-#BandeauPart,
-#BandeauPro {
-    display: none;
-    background: #00a97a;
+#Particuliers:hover {
+  background-color: #0fb88a;
+  color: #fff;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,0.35);
+  transform: translateY(-1px);
+}
+#Professionnels:hover {
+  background-color: #0fb88a;
+  color: #fff;
+  box-shadow: inset 0 -3px 0 rgba(255,255,255,0.35);
+  transform: translateY(-1px);
 }
 #Bandeau1 a[href="Particuliers.html"]:hover ~ #BandeauPart {
     display: block;
@@ -52,7 +59,20 @@ header a {
 #LogoAccueil {
     width: 100px;
 }
-
+#MonCompteLogo {
+    width: 60px;
+    margin-bottom: -5px;
+}
+#MonCompte {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    margin-top: -20px;
+}
+#MonCompte:hover {
+    color: #fff;
+    transform: translateY(-1px);
+}
                                         /*Partie footer Haut */
 body {
     margin: 0;
@@ -75,7 +95,7 @@ body {
     width: 250px;
     flex-direction: column;
     gap: 10px;
-    height: 400px;
+    height: 450px;
 }
 #Logo img{  
     width: auto;  
@@ -103,12 +123,12 @@ body {
 }
 
 #Ecriture h1 {
-    font-family: Georgia, 'Akrobat', Times, serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px;
 }
 #Ecriture p {
-    font-family: Georgia, 'Akrobat', Times, serif;
-    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
 }
 #Nous_Contacter {
     align-items: center;
@@ -120,26 +140,26 @@ body {
     margin-top:75px;
 }
 #Ecriture2 h1 {
-    font-family: Georgia, 'Akrobat', Times, serif;
+    font-family: 'Poppins', sans-serif;
     font-size: x-large;
 }
 #Ecriture2 p {
-    font-family: Georgia, 'Akrobat', Times, serif;
+    font-family: 'Poppins', sans-serif;
 }
 #Contacter {
-    font-family: Georgia, 'Akrobat', Times, serif;
+    font-family: 'Poppins', sans-serif;
     font-size: large;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
 #Contacter1 {
-    font-family: Georgia, 'Akrobat', Times, serif;
+    font-family: 'Poppins', sans-serif;
     font-size: large;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
 .btn-contact {
-    font-family: Georgia, 'Akrobat', Times, serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     display: flex;
     justify-content: center;
