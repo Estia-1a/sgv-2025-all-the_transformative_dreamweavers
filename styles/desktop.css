@@ -1,33 +1,56 @@
-
+                                         /*Partie Header*/
 /* Style général (optionnel) */
-header div {
+header {
     padding: 10px;
-    background: #f0f0f0;
+    background: #00a97a;
+    height: 70px;
 }
-
+#Bandeau1 {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+}
 header a {
+    display: flex;
     margin-right: 15px;
     text-decoration: none;
     color: black;
+    display: inline-block;
+    align-items: center;
+    height: 70px;
 }
-
+#Professionnels {
+    border-left: 1px solid #eff3f1;
+    border-right: 1px solid #eff3f1;
+    padding: 20px;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+#Particuliers {
+    border-left: 1px solid #eff3f1;
+    padding: 20px;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
 /* Masquer les bandeaux secondaires au départ */
 #BandeauPart,
 #BandeauPro {
     display: none;
-    background: #e5e5e5;
+    background: #00a97a;
 }
-
-/* Affichage au survol */
-
-/* Quand on survole "Particuliers" */
 #Bandeau1 a[href="Particuliers.html"]:hover ~ #BandeauPart {
     display: block;
+    background-color: #074735;
 }
-
-/* Quand on survole "Professionnels" */
 #Bandeau1 a[href="Professionnels.html"]:hover ~ #BandeauPro {
     display: block;
+}
+#LogoAccueil {
+    width: 100px;
 }
 
                                         /*Partie footer Haut */
@@ -95,8 +118,6 @@ body {
     flex-direction: column;
     gap: 20px;
     margin-top:75px;
-
-
 }
 #Ecriture2 h1 {
     font-family: Georgia, 'Akrobat', Times, serif;
