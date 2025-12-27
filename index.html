@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width: 768px)"> 
+    <link rel="stylesheet" type="text/css" href="styles/mobile.css" media="screen and (max-width: 767px)"> 
     <title>Document</title>
 </head>
 <body>
-    <header>  
-
-        <div id="Bandeau1">
-            <a href="Particuliers.html">Particuliers</a>
-            <a href="Professionnels.html">Professionnels</a>
-        </div>
-        <div id="BandeauPart">
-            <a href="Particuliers.html">Professionnels</a>
-            <a href="MonProfil.html">Mon Profil</a>
-            <a href="MesDonnees.html">Mes Donnees</a>
-            <a href="ResumeDuMois.html">Resume Du Mois</a>
-        </div>
-        <div id="BandeauPro">
-            <a href="Professionnels.html">Professionnels</a>
-            <a href="MonProfil.html">Mon Profil</a>
-            <a href="MesClients.html">Mes Clients</a>
-        </div>
+    <header> 
+        <div class="menu">
+            <ul id="Bandeau1">
+                <li><img id="MainLogo" src="media/pictures/logo.svg" alt="MainLogo"></li>
+                <li class="BandeauPart">
+                    <a href="Particuliers.html">Particuliers</a>
+                    <ul class="BandeauPart2">
+                        <li><a href="Particuliers.html">Professionnels</a></li>
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="MesDonnees.html">Mes Donnees</a></li>
+                        <li><a href="ResumeDuMois.html">Resume Du Mois</a></li>
+                    </ul>
+                </li>
+                <li class="BandeauPro">
+                    <a href="Professionnels.html">Professionnels</a>
+                    <ul class="BandeauPro2">
+                        <li><a href="Professionnels.html">Professionnels</a></li>
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="MesClients.html">Mes Clients</a></li>
+                    </ul>
+                </li>
+            </ul>
             
-
+            
+        </div> 
+            
     </header>
     <section id="Uper-body">
-        <div class="Phrase d'accroche presentation site">
+        <div class="Accroche">
             <h1>Rejoignez l'aventure bien être</h1>
             <div class="Liste + bouton">
                 <div class="Liste">

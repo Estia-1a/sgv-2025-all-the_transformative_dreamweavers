@@ -1,39 +1,72 @@
-
-/* Style général (optionnel) */
-header div {
-    padding: 10px;
-    background: #f0f0f0;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-header a {
-    margin-right: 15px;
+/************* HEADER *****************/
+
+.menu{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: #00a97a;
+}
+
+
+.menu ul a{
+    display: block;
     text-decoration: none;
     color: black;
+    padding: 20px;
 }
 
-/* Masquer les bandeaux secondaires au départ */
-#BandeauPart,
-#BandeauPro {
+#Bandeau1{
+    display: flex;
+}
+
+.BandeauPart2, .BandeauPro2{
     display: none;
-    background: #e5e5e5;
 }
 
 /* Affichage au survol */
 
-/* Quand on survole "Particuliers" */
-#Bandeau1 a[href="Particuliers.html"]:hover ~ #BandeauPart {
-    display: block;
+/* Quand on survole "Professionnels" */
+.BandeauPro:hover .BandeauPro2{
+    display: flex;
+    background: #2EFFC4;
 }
 
-/* Quand on survole "Professionnels" */
-#Bandeau1 a[href="Professionnels.html"]:hover ~ #BandeauPro {
-    display: block;
+/* Quand on survole "Particuliers" */
+.BandeauPart:hover .BandeauPart2{
+    display: flex;
+    background: #2EFFC4;
+}
+
+
+
+/************* BODY *****************/
+
+
+body{
+    height: 500vh;
+}
+
+#Uper-body{
+    padding-block-start: 60px;
+    background-color: blue;
+    height: 500px;
+}
+
+#MainLogo{
+    margin-right: 50px;
 }
 
                                         /*Partie footer Haut */
 body {
     margin: 0;
     padding: 0;
+    height: 500vh;
 }                                 
                                        /*Partie footer Haut */
 #top_footer {
