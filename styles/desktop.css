@@ -10,9 +10,10 @@ header {
     align-items: center;
     margin-top: -10px;
 }
-header a {
+
+.menu ul a{
     display: flex;
-    margin-right: 15px;
+    display: block;
     text-decoration: none;
     color: black;
     display: inline-block;
@@ -77,6 +78,7 @@ header a {
 body {
     margin: 0;
     padding: 0;
+    height: 500vh;
 }                                 
                                        /*Partie footer Haut */
 #top_footer {
