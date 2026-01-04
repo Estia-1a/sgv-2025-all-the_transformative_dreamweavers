@@ -11,7 +11,7 @@
 
 #data {
   min-height: calc(100vh - 70px); /* sous le header (70px) */
-  font-family: 'Poppins', sans-serif,
+  font-family: 'Poppins', sans-serif;
   color: var(--text);
   background: linear-gradient(180deg, rgba(0,169,122,0.06), rgba(7,71,53,0.05));
   padding: 24px 16px 48px;
@@ -725,7 +725,7 @@ button:focus-visible {
   color: var(--text);
   padding: 10px 14px;
   border-radius: 10px;
-  font-weight: 600px;
+  font-weight: 600;
   cursor: pointer;
   transition: .2s ease;
 }

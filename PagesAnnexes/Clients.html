@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/clients.css" media="screen and (min-width: 768px)"> 
+    <link rel="stylesheet" href="../styles/mobile.css" media="screen and (max-width: 767px)">
+    <title>ZenConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="menu">
+            <ul id="Bandeau1">
+                <li><a id="limasse" href="../index.html"><img id="MainLogo" src="../media/pictures/ZENCONNECT_LOGO_TRSP.png" alt="MainLogo"></a></li>
+                <li class="BandeauPart">
+                    <a href="">Particuliers</a>
+                    <ul class="BandeauPart2">
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="MesDonnees.html">Mes Donnees</a></li>
+                        <li><a href="ResumeDuMois.html">Resume Du Mois</a></li>
+                        <li><a href="MonCompte.html">Se Connecter</a></li>
+                    </ul>
+                </li>
+                <li class="BandeauPro">
+                    <a href="">Professionnels</a>
+                    <ul class="BandeauPro2">
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="Clients.html">Mes Clients</a></li>
+                        <li><a href="MonCompte.html">Se Connecter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>  
+    </header>  
+    <main id="clients" aria-label="Liste des clients — Professionnels">
+        <div class="layout">
+        <!-- Barre supérieure -->
+        <header class="topbar">
+            <h2>Mes clients</h2>
+            <div class="tools">
+            <div class="search">
+                <input type="search" id="searchInput" placeholder="Rechercher un client ou une demande…" aria-label="Rechercher">
+            </div>
+            <div class="filters">
+                <button class="chip active" data-filter="all">Tous</button>
+                <button class="chip" data-filter="urgent">Urgent</button>
+                <button class="chip" data-filter="suivi">En suivi</button>
+                <button class="chip" data-filter="nouveau">Nouveau</button>
+            </div>
+            </div>
+        </header>
+
+        <!-- Liste -->
+        <div class="list">
+            <!-- ÉLÉMENT — exemple -->
+            <article class="item" data-status="urgent" data-tags="cardio stress">
+            <div class="col main">
+                <div class="avatar" aria-hidden="true">AM</div>
+                <div class="info">
+                <h3 class="name">Alex Martin</h3>
+                <p class="request">Demande : palpitations fréquentes, souhaite un suivi du rythme cardiaque et conseils anti-stress.</p>
+                <div class="tags">
+                    <span class="tag">Cardio</span><span class="tag">Stress</span>
+                </div>
+                </div>
+            </div>
+            <div class="col meta">
+                <div class="status urgent">Urgent</div>
+                <small>Dernière activité : il y a 2 h</small>
+            </div>
+            <div class="col actions">
+                <button class="btn-outline btn-reco">Recommander</button>
+                <button class="btn-primary btn-chat">Démarrer une discussion</button>
+
+                <!-- Menu de recommandation -->
+                <div class="reco-menu">
+                <button class="reco-option" data-reco="plan-activité">Plan d’activité (3×30 min)</button>
+                <button class="reco-option" data-reco="respiration">Respiration 4-7-8 (10 min)</button>
+                <button class="reco-option" data-reco="hydratation">Hydratation (2 L/j)</button>
+                <button class="reco-option" data-reco="rdv">Proposer un rendez-vous</button>
+                </div>
+            </div>
+            </article>
+
+            <!-- Autres clients (fictifs) -->
+            <article class="item" data-status="suivi" data-tags="pas calories">
+            <div class="col main">
+                <div class="avatar">JB</div>
+                <div class="info">
+                <h3 class="name">Julie Bernard</h3>
+                <p class="request">Demande : atteindre 10 000 pas/j, équilibrer l’apport calorique.</p>
+                <div class="tags"><span class="tag">Pas</span><span class="tag">Calories</span></div>
+                </div>
+            </div>
+            <div class="col meta">
+                <div class="status suivi">En suivi</div>
+                <small>Dernière activité : hier</small>
+            </div>
+            <div class="col actions">
+                <button class="btn-outline btn-reco">Recommander</button>
+                <button class="btn-primary btn-chat">Démarrer une discussion</button>
+                <div class="reco-menu">
+                <button class="reco-option" data-reco="marche">Marche 30 min</button>
+                <button class="reco-option" data-reco="objectif-pas">Objectif 10 k/j</button>
+                <button class="reco-option" data-reco="alimentation">Alimentation équilibrée</button>
+                <button class="reco-option" data-reco="rdv">Proposer un rendez-vous</button>
+                </div>
+            </div>
+            </article>
+
+            <article class="item" data-status="nouveau" data-tags="sommeil stress">
+            <div class="col main">
+                <div class="avatar">TN</div>
+                <div class="info">
+                <h3 class="name">Tarek Nassar</h3>
+                <p class="request">Demande : améliorer sommeil, réduire stress avant examens.</p>
+                <div class="tags"><span class="tag">Sommeil</span><span class="tag">Stress</span></div>
+                </div>
+            </div>
+            <div class="col meta">
+                <div class="status nouveau">Nouveau</div>
+                <small>Dernière activité : il y a 30 min</small>
+            </div>
+            <div class="col actions">
+                <button class="btn-outline btn-reco">Recommander</button>
+                <button class="btn-primary btn-chat">Démarrer une discussion</button>
+                <div class="reco-menu">
+                <button class="reco-option" data-reco="routine-sommeil">Routine de sommeil</button>
+                <button class="reco-option" data-reco="respiration">Respiration 10 min</button>
+                <button class="reco-option" data-reco="limiter-écrans">Limiter écrans 1 h avant</button>
+                <button class="reco-option" data-reco="rdv">Proposer un rendez-vous</button>
+                </div>
+            </div>
+            </article>
+
+            <article class="item" data-status="suivi" data-tags="hydratation cardio">
+            <div class="col main">
+                <div class="avatar">CM</div>
+                <div class="info">
+                <h3 class="name">Clara Moreau</h3>
+                <p class="request">Demande : mieux s’hydrater, surveiller cardio pendant reprise sportive.</p>
+                <div class="tags"><span class="tag">Hydratation</span><span class="tag">Cardio</span></div>
+                </div>
+            </div>
+            <div class="col meta">
+                <div class="status suivi">En suivi</div>
+                <small>Dernière activité : il y a 3 j</small>
+            </div>
+            <div class="col actions">
+                <button class="btn-outline btn-reco">Recommander</button>
+                <button class="btn-primary btn-chat">Démarrer une discussion</button>
+                <div class="reco-menu">
+                <button class="reco-option" data-reco="hydratation">Hydratation 2 L/j</button>
+                <button class="reco-option" data-reco="cardio-léger">Cardio léger</button>
+                <button class="reco-option" data-reco="rdv">Proposer un rendez-vous</button>
+                </div>
+            </div>
+            </article>
+
+            <article class="item" data-status="urgent" data-tags="stress pas">
+            <div class="col main">
+                <div class="avatar">PL</div>
+                <div class="info">
+                <h3 class="name">Pierre Leclerc</h3>
+                <p class="request">Demande : stress élevé au travail, augmenter l’activité quotidienne.</p>
+                <div class="tags"><span class="tag">Stress</span><span class="tag">Pas</span></div>
+                </div>
+            </div>
+            <div class="col meta">
+                <div class="status urgent">Urgent</div>
+                <small>Dernière activité : il y a 1 h</small>
+            </div>
+            <div class="col actions">
+                <button class="btn-outline btn-reco">Recommander</button>
+                <button class="btn-primary btn-chat">Démarrer une discussion</button>
+                <div class="reco-menu">
+                <button class="reco-option" data-reco="respiration">Respiration 4-7-8</button>
+                <button class="reco-option" data-reco="pauses-actives">Pauses actives 5 min</button>
+                <button class="reco-option" data-reco="rdv">Proposer un rendez-vous</button>
+                </div>
+            </div>
+            </article>
+
+            <article class="item" data-status="nouveau" data-tags="somn vigilance">
+            <div class="col main">
+                <div class="avatar">ES</div>
+                <div class="info">
+                <h3 class="name">Emma Simon</h3>
+                <p class="request">Demande : somnolence en journée, veut suivre vigilance/siestes.</p>
+                <div class="tags"><span class="tag">Sommeil</span><span class="tag">Vigilance</span></div>
+                </div>
+            </div>
+            <div class="col meta">
+                <div class="status nouveau">Nouveau</div>
+                <small>Dernière activité : aujourd’hui</small>
+            </div>
+            <div class="col actions">
+                <button class="btn-outline btn-reco">Recommander</button>
+                <button class="btn-primary btn-chat">Démarrer une discussion</button>
+                <div class="reco-menu">
+                <button class="reco-option" data-reco="siestes-courtes">Siestes courtes (20 min)</button>
+                <button class="reco-option" data-reco="routine-sommeil">Routine de sommeil</button>
+                <button class="reco-option" data-reco="rdv">Proposer un rendez-vous</button>
+                </div>
+            </div>
+            </article>
+        </div>
+        </div>
+
+        <!-- Panneau discussion (drawer) -->
+        <aside class="drawer" aria-label="Discussion">
+        <header class="drawer-head">
+            <h3>Discussion</h3>
+            <button class="drawer-close" aria-label="Fermer">✕</button>
+        </header>
+        <div class="drawer-body">
+            <div class="msg incoming"><strong>Client :</strong> Bonjour, j’aimerais des conseils pour réduire mon stress.</div>
+            <div class="msg outgoing"><strong>Vous :</strong> Bien sûr. Commençons par des respirations 4‑7‑8 2×/jour.</div>
+        </div>
+        <form class="drawer-input" autocomplete="off">
+            <input type="text" name="message" placeholder="Écrire un message…" aria-label="Message">
+            <button type="submit" class="btn-primary">Envoyer</button>
+        </form>
+        </aside>
+    </main>
+    <footer>
+        <section id="top_footer">
+            <div id="Reseaux_sociaux">
+                <div id="Ecriture">
+                        <h1>Vous pouvez nous contacter</h1> 
+                        <p>Suivez-nous sur :</p>
+                </div>
+                <div id="Logo">
+                    <div id="LogoX">
+                        <a href="https://x.com/Cristiano"><img src="../media/pictures/X-filaire.svg" alt="Notre X"></a>
+                    </div>
+                    <div id="LogoFacebook">
+                        <a href="https://www.facebook.com/Cristiano/"><img src="../media/pictures/Facebook-filaire.svg" alt="Notre Facebook"></a>   
+                    </div>       
+                </div> 
+            </div>
+            <div id="Nous_Contacter">
+                <div id="Ecriture2">
+                    <h1>Nous sommes joignables</h1>
+                    <p>Par téléphone, sur place ou par courriel, choisissez !</p>     
+                </div>
+                <a id="Contacter" href="https://www.linkedin.com/in/thomas-claverie-abp/?originalSubdomain=fr" class="btn-contact">Nous contacter</a>
+            </div>
+
+        </section>
+        <section id="footer">
+            <div id="lien_utile">
+                <div class="colonne">
+                    <h4>Espace</h4>
+                    <ul id="espace"> 
+                        <li> Patient </li>
+                        <li> Professionnel de santé </li>
+
+                    </ul>
+                </div>
+                <div class="colonne">
+                    <h4>Informations</h4>
+                    <ul id="informations">
+                        <li> Mentions légales </li>
+                        <li> Plan du site </li>
+                        <li> Foire aux questions </li>
+                    </ul>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div id="information">
+                <ul id="barre_navigation">
+                    <li>PRESSE</li>
+                    <li>EMPLOIS ET CARRIÈRES</li>
+                    <li>RECHERCHE ET STATISTIQUES</li>
+                    <li>INTERNATIONAL</li>
+                    <li>MARCHÉS PUBLICS</li>
+                </ul>
+            </div>
+
+        </section>
+        <div id="parseval">
+            <div id="un">
+                Copyright © 2025 ZenConnect.net
+            </div>
+            <div id="deux">
+                ZenConnect France
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>

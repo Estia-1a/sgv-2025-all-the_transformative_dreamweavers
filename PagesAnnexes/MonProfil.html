@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <!-- Police -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" >
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/profilparticulier.css" >
+
+  <title>ZenConnect — Mon profil</title>
+</head>
+<body>
+  <header>
+    <!-- Menu supérieur -->
+    <div class="menu-top">
+      <ul id="Bandeau1">
+        <li>
+          <a id="limasse" href="../index.html">
+            <img id="MainLogo" src="../media/pictures/ZENCONNECT_LOGO_TRSP.png" alt="ZenConnect logo" >
+          </a>
+        </li>
+
+        <li class="BandeauPart">
+          <a href="#">Particuliers</a>
+          <ul class="BandeauPart2">
+            <li><a href="MonProfil.html">Mon Profil</a></li>
+            <li><a href="MesDonnees.html">Mes Donnees</a></li>
+            <li><a href="ResumeDuMois.html">Resume Du Mois</a></li>
+            <li><a href="MonCompte.html">Se Connecter</a></li>
+          </ul>
+        </li>
+
+        <li class="BandeauPro">
+          <a href="#">Professionnels</a>
+          <ul class="BandeauPro2">
+            <li><a href="MonProfil.html">Mon Profil</a></li>
+            <li><a href="Clients.html">Mes Clients</a></li>
+            <li><a href="MonCompte.html">Se Connecter</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="profile" aria-label="Mon profil — Particulier">
+    <div class="layout">
+
+      <!-- Bandeau entête -->
+      <section class="hero">
+        <div class="avatar" aria-hidden="true">EN</div>
+
+        <div class="identity">
+          <h1>Mon profil</h1>
+          <p class="sub">Particulier — <span class="brand">ZenConnect</span></p>
+
+          <div class="quick" role="tablist" aria-label="Accès rapide">
+            <button class="chip" data-target="#p-infos" role="tab" aria-controls="p-infos">Infos</button>
+            <button class="chip" data-target="#p-health" role="tab" aria-controls="p-health">Santé &amp; objectifs</button>
+            <button class="chip" data-target="#p-devices" role="tab" aria-controls="p-devices">Appareils reliés</button>
+            <button class="chip" data-target="#p-requests" role="tab" aria-controls="p-requests">Demandes</button>
+            <button class="chip" data-target="#p-privacy" role="tab" aria-controls="p-privacy">Confidentialité</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Navigation profil">
+          <nav class="menu">
+            <button class="menu-item active" data-target="#p-infos" aria-current="page">👤 Informations</button>
+            <button class="menu-item" data-target="#p-health">🏃 Santé &amp; objectifs</button>
+            <button class="menu-item" data-target="#p-devices">⌚ Appareils reliés</button>
+            <button class="menu-item" data-target="#p-requests">📝 Demandes par sujets</button>
+            <button class="menu-item" data-target="#p-privacy">🔏 Confidentialité &amp; partage</button>
+          </nav>
+        </aside>
+
+        <!-- Contenu -->
+        <section class="content">
+          <!-- Panneau : Infos personnelles -->
+          <div id="p-infos" class="panel active" role="region" aria-label="Informations personnelles">
+            <header class="panel-head">
+              <h2>Informations personnelles</h2>
+              <div class="actions">
+                <button class="btn-outline" id="btnEditInfos">Modifier</button>
+                <button class="btn-primary hidden" id="btnSaveInfos">Enregistrer</button>
+                <button class="btn-outline hidden" id="btnCancelInfos">Annuler</button>
+              </div>
+            </header>
+
+            <form id="formInfos" class="form" novalidate>
+              <div class="grid2">
+                <div class="field">
+                  <label for="fn">Prénom</label>
+                  <input id="fn" name="prenom" type="text" value="Gabriel" disabled required>
+                </div>
+                <div class="field">
+                  <label for="ln">Nom</label>
+                  <input id="ln" name="nom" type="text" value="Lucian" disabled required>
+                </div>
+              </div>
+
+              <div class="grid2">
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" value="gabiezz64hasparrenmelba@example.com" disabled required>
+                </div>
+                <div class="field">
+                  <label for="phone">Téléphone</label>
+                  <input id="phone" name="phone" type="tel" value="+33 6 12 34 56 78" disabled>
+                </div>
+              </div>
+
+              <div class="grid2">
+                <div class="field">
+                  <label for="birth">Date de naissance</label>
+                  <input id="birth" name="birth" type="date" value="2000-01-01" disabled>
+                </div>
+                <div class="field">
+                  <label for="gender">Genre</label>
+                  <select id="gender" name="gender" disabled>
+                    <option value="f">Femme</option>
+                    <option value="m" selected>Homme</option>
+                    <option value="x">Autre / Préfère ne pas dire</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid2">
+                <div class="field">
+                  <label for="height">Taille (cm)</label>
+                  <input id="height" name="height" type="number" min="100" max="230" value="178" disabled>
+                </div>
+                <div class="field">
+                  <label for="weight">Poids (kg)</label>
+                  <input id="weight" name="weight" type="number" min="30" max="250" value="75" disabled>
+                </div>
+              </div>
+
+              <div class="grid2">
+                <div class="field">
+                  <label for="blood">Groupe sanguin</label>
+                  <select id="blood" name="blood" disabled>
+                    <option>O+</option><option>O-</option><option>A+</option><option>A-</option>
+                    <option>B+</option><option>B-</option><option>AB+</option><option selected>AB-</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="doctor">Médecin traitant</label>
+                  <input id="doctor" name="doctor" type="text" value="Dr. Melba" disabled>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="allergies">Allergies</label>
+                <input id="allergies" name="allergies" type="text" value="Arachides, pollen" disabled>
+              </div>
+
+              <div class="field">
+                <label for="conditions">Conditions / antécédents</label>
+                <textarea id="conditions" rows="3" disabled>—</textarea>
+              </div>
+
+              <div class="field">
+                <label for="addr">Adresse</label>
+                <input id="addr" name="addr" type="text" value="12 rue du Bien-Être, 75000 Paris" disabled>
+              </div>
+            </form>
+          </div>
+
+          <!-- Panneau : Santé & objectifs -->
+          <div id="p-health" class="panel" role="region" aria-label="Santé &amp; objectifs">
+            <header class="panel-head">
+              <h2>Santé &amp; objectifs</h2>
+            </header>
+
+            <form id="formHealth" class="form" novalidate>
+              <div class="grid2">
+                <div class="field">
+                  <label for="goalSteps">Objectif de pas / jour</label>
+                  <input id="goalSteps" type="number" min="1000" max="30000" value="10000">
+                </div>
+                <div class="field">
+                  <label for="goalHydro">Objectif hydratation (L / jour)</label>
+                  <input id="goalHydro" type="number" step="0.1" min="0.5" max="5" value="2">
+                </div>
+              </div>
+
+              <div class="grid2">
+                <div class="field">
+                  <label for="goalSleep">Objectif sommeil (heures / nuit)</label>
+                  <input id="goalSleep" type="number" step="0.5" min="4" max="10" value="8">
+                </div>
+                <div class="field">
+                  <label for="goalWeight">Objectif poids (kg)</label>
+                  <input id="goalWeight" type="number" min="40" max="200" value="72">
+                </div>
+              </div>
+
+              <div class="prefs">
+                <h3>Rappels &amp; préférences</h3>
+                <label class="switch">
+                  <input type="checkbox" id="remindHydro" checked>
+                  <span>Rappels d’hydratation (toutes les 2 h)</span>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" id="remindActivity">
+                  <span>Rappels d’activité (3×30 min / semaine)</span>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" id="remindSleep">
+                  <span>Routine de sommeil (coucher régulier)</span>
+                </label>
+              </div>
+
+              <div class="actions">
+                <button type="submit" class="btn-primary">Enregistrer mes objectifs</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Panneau : Appareils reliés -->
+          <div id="p-devices" class="panel" role="region" aria-label="Appareils reliés">
+            <header class="panel-head">
+              <h2>Appareils reliés</h2>
+              <div class="actions">
+                <button class="btn-outline" id="btnAddDevice">Ajouter un appareil</button>
+              </div>
+            </header>
+
+            <div class="devices">
+              <!-- Apple Watch / Apple Health -->
+              <article class="device connected" data-id="apple-watch">
+                <div class="d-head">
+                  <div class="d-ico">⌚</div>
+                  <div>
+                    <h4>Apple Watch / Apple Health</h4>
+                    <small class="muted">Cardio, pas, sommeil</small>
+                  </div>
+                </div>
+                <div class="d-actions">
+                  <span class="state ok">Connecté</span>
+                  <button class="btn-outline action-disconnect">Déconnecter</button>
+                </div>
+              </article>
+
+              <!-- Android Health Connect -->
+              <article class="device" data-id="health-connect">
+                <div class="d-head">
+                  <div class="d-ico">🤖</div>
+                  <div>
+                    <h4>Android Health Connect</h4>
+                    <small class="muted">Agrégation Android (pas, cardio, sommeil)</small>
+                  </div>
+                </div>
+                <div class="d-actions">
+                  <span class="state off">Non connecté</span>
+                  <button class="btn-primary action-connect">Connecter</button>
+                </div>
+              </article>
+
+              <!-- Garmin -->
+              <article class="device" data-id="garmin">
+                <div class="d-head">
+                  <div class="d-ico">⌚</div>
+                  <div>
+                    <h4>Garmin</h4>
+                    <small class="muted">Cardio, GPS</small>
+                  </div>
+                </div>
+                <div class="d-actions">
+                  <span class="state off">Non connecté</span>
+                  <button class="btn-primary action-connect">Connecter</button>
+                </div>
+              </article>
+
+              <!-- Fitbit -->
+              <article class="device" data-id="fitbit">
+                <div class="d-head">
+                  <div class="d-ico">🎯</div>
+                  <div>
+                    <h4>Fitbit</h4>
+                    <small class="muted">Pas, sommeil</small>
+                  </div>
+                </div>
+                <div class="d-actions">
+                  <span class="state off">Non connecté</span>
+                  <button class="btn-primary action-connect">Connecter</button>
+                </div>
+              </article>
+
+              <!-- Withings -->
+              <article class="device" data-id="withings">
+                <div class="d-head">
+                  <div class="d-ico">💓</div>
+                  <div>
+                    <h4>Withings</h4>
+                    <small class="muted">Balance, BPM, sommeil</small>
+                  </div>
+                </div>
+                <div class="d-actions">
+                  <span class="state off">Non connecté</span>
+                  <button class="btn-primary action-connect">Connecter</button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Modal d’ajout (démo) -->
+            <dialog class="modal" id="modalAddDevice" aria-label="Ajouter un appareil">
+              <form method="dialog" class="modal-box">
+                <h3>Ajouter un appareil</h3>
+                <label class="field">
+                  <span>Type d’appareil</span>
+                  <select id="newDeviceType">
+                    <option value="apple-watch">Apple Watch / Apple Health</option>
+                    <option value="health-connect">Android Health Connect</option>
+                    <option value="garmin">Garmin</option>
+                    <option value="fitbit">Fitbit</option>
+                    <option value="withings">Withings</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                </label>
+
+                <label class="field">
+                  <span>Code d’appairage (si requis)</span>
+                  <input type="text" id="pairCode" placeholder="Ex : 6C9-TZ4">
+                </label>
+
+                <div class="actions">
+                  <button value="cancel" class="btn-outline">Annuler</button>
+                  <button id="confirmAddDevice" class="btn-primary">Ajouter</button>
+                </div>
+              </form>
+            </dialog>
+          </div>
+
+          <!-- Panneau : Demandes -->
+          <div id="p-requests" class="panel" role="region" aria-label="Demandes par sujets">
+            <header class="panel-head">
+              <h2>Faire une demande</h2>
+            </header>
+
+            <form id="formRequest" class="form" autocomplete="off">
+              <div class="topics" role="tablist" aria-label="Type de demande">
+                <button type="button" class="topic active" data-topic="rdv">📅 Rendez‑vous</button>
+                <button type="button" class="topic" data-topic="docs">📄 Documents</button>
+                <button type="button" class="topic" data-topic="conseils">💡 Conseils</button>
+                <button type="button" class="topic" data-topic="donnees">📊 Données</button>
+                <button type="button" class="topic" data-topic="tech">🛠️ Technique</button>
+                <button type="button" class="topic" data-topic="urgence">🚑 Urgence</button>
+              </div>
+
+              <div class="grid2">
+                <div class="field">
+                  <label for="subject">Sujet</label>
+                  <input id="subject" type="text" placeholder="Ex : Partager mes données cardio + paramétrage" required>
+                </div>
+                <div class="field">
+                  <label for="priority">Priorité</label>
+                  <select id="priority">
+                    <option value="normal">Normale</option>
+                    <option value="haute">Haute</option>
+                    <option value="critique">Critique</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="desc">Détails</label>
+                <textarea id="desc" rows="5" placeholder="Expliquez votre demande…"></textarea>
+              </div>
+
+              <div class="grid2">
+                <div class="field">
+                  <label for="attach">Pièce jointe</label>
+                  <input id="attach" type="file">
+                </div>
+                <div class="field">
+                  <label for="visibility">Visibilité</label>
+                  <select id="visibility">
+                    <option value="pro">Mon professionnel de santé</option>
+                    <option value="equipe">Équipe soignante</option>
+                    <option value="prive">Privé (notes personnelles)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button type="submit" class="btn-primary">Envoyer la demande</button>
+              </div>
+            </form>
+
+            <section class="history" aria-label="Historique des demandes">
+              <h3>Historique</h3>
+              <ul class="history-list" id="historyList">
+                <!-- les éléments s’ajoutent ici -->
+              </ul>
+            </section>
+          </div>
+
+          <!-- Panneau : Confidentialité & partage -->
+          <div id="p-privacy" class="panel" role="region" aria-label="Confidentialité &amp; partage">
+            <header class="panel-head"><h2>Confidentialité &amp; partage</h2></header>
+
+            <form class="form">
+              <div class="prefs">
+                <label class="switch">
+                  <input type="checkbox" id="sharePro" checked>
+                  <span>Partager mes données avec mon professionnel de santé</span>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" id="shareEmergency">
+                  <span>Autoriser l’accès à mes infos d’urgence</span>
+                </label>
+                <label class="switch">
+                  <input type="checkbox" id="shareResearch">
+                  <span>Autoriser l’usage anonymisé pour la recherche</span>
+                </label>
+              </div>
+
+              <div class="actions">
+                <button type="button" class="btn-outline" id="btnExport">Télécharger mes données (JSON)</button>
+                <button type="button" class="btn-outline danger" id="btnDelete">Supprimer mon compte (démo)</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Toast simple -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+<footer>
+        <section id="top_footer">
+            <div id="Reseaux_sociaux">
+                <div id="Ecriture">
+                        <h1>Vous pouvez nous contacter</h1> 
+                        <p>Suivez-nous sur :</p>
+                </div>
+                <div id="Logo">
+                    <div id="LogoX">
+                        <a href="https://x.com/Cristiano"><img src="../media/pictures/X-filaire.svg" alt="Notre X"></a>
+                    </div>
+                    <div id="LogoFacebook">
+                        <a href="https://www.facebook.com/Cristiano/"><img src="../media/pictures/Facebook-filaire.svg" alt="Notre Facebook"></a>   
+                    </div>       
+                </div> 
+            </div>
+            <div id="Nous_Contacter">
+                <div id="Ecriture2">
+                    <h1>Nous sommes joignables</h1>
+                    <p>Par téléphone, sur place ou par courriel, choisissez !</p>     
+                </div>
+                <a id="Contacter" href="https://www.linkedin.com/in/thomas-claverie-abp/?originalSubdomain=fr" class="btn-contact">Nous contacter</a>
+            </div>
+
+        </section>
+        <section id="footer">
+            <div id="lien_utile">
+                <div class="colonne">
+                    <h4>Espace</h4>
+                    <ul id="espace"> 
+                        <li> Patient </li>
+                        <li> Professionnel de santé </li>
+
+                    </ul>
+                </div>
+                <div class="colonne">
+                    <h4>Informations</h4>
+                    <ul id="informations">
+                        <li> Mentions légales </li>
+                        <li> Plan du site </li>
+                        <li> Foire aux questions </li>
+                    </ul>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div id="information">
+                <ul id="barre_navigation">
+                    <li>PRESSE</li>
+                    <li>EMPLOIS ET CARRIÈRES</li>
+                    <li>RECHERCHE ET STATISTIQUES</li>
+                    <li>INTERNATIONAL</li>
+                    <li>MARCHÉS PUBLICS</li>
+                </ul>
+            </div>
+
+        </section>
+        <div id="parseval">
+            <div id="un">
+                Copyright © 2025 ZenConnect.net
+            </div>
+            <div id="deux">
+                ZenConnect France
+            </div>
+        </div> 
+    </footer>
+
+  <!-- JS : interaction -->
+  <script>
+    // ---- helpers ----
+    const qs = (sel, parent = document) => parent.querySelector(sel);
+    const qsa = (sel, parent = document) => [...parent.querySelectorAll(sel)];
+    const toast = qs('#toast');
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    }
+
+    // ---- navigation panneaux ----
+    function showPanel(targetId) {
+      const panel = qs(targetId);
+      if (!panel) return;
+
+      qsa('.panel').forEach(p => p.classList.remove('active'));
+      panel.classList.add('active');
+
+      // état visuel des boutons
+      qsa('.menu-item, .chip').forEach(b => {
+        b.classList.toggle('active', b.dataset.target === targetId);
+        b.setAttribute('aria-selected', b.dataset.target === targetId ? 'true' : 'false');
+      });
+
+      // focus sur le titre du panneau
+      const h2 = panel.querySelector('h2');
+      if (h2) h2.focus?.();
+    }
+
+    // Lier sidebar & chips
+    qsa('.menu-item, .chip').forEach(btn => {
+      btn.addEventListener('click', () => showPanel(btn.dataset.target));
+    });
+
+    // ---- édition infos personnelles ----
+    const formInfos = qs('#formInfos');
+    const btnEditInfos = qs('#btnEditInfos');
+    const btnSaveInfos = qs('#btnSaveInfos');
+    const btnCancelInfos = qs('#btnCancelInfos');
+
+    function setInfosEditable(editable) {
+      qsa('input, select, textarea', formInfos).forEach(el => {
+        if (el.id === 'email') el.required = true;
+        el.disabled = !editable;
+      });
+      btnEditInfos.classList.toggle('hidden', editable);
+      btnSaveInfos.classList.toggle('hidden', !editable);
+      btnCancelInfos.classList.toggle('hidden', !editable);
+    }
+
+    btnEditInfos.addEventListener('click', () => setInfosEditable(true));
+    btnCancelInfos.addEventListener('click', () => {
+      setInfosEditable(false);
+      formInfos.reset(); // remet les valeurs initiales (HTML)
+      showToast('Modifications annulées');
+    });
+    btnSaveInfos.addEventListener('click', () => {
+      // mini validation
+      if (!qs('#email').value.includes('@')) {
+        showToast('Email invalide');
+        qs('#email').focus();
+        return;
+      }
+      setInfosEditable(false);
+      showToast('Informations enregistrées');
+    });
+
+    // ---- santé & objectifs ----
+    qs('#formHealth').addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Objectifs enregistrés');
+    });
+
+    // ---- appareils : modal d’ajout ----
+    const modalAdd = qs('#modalAddDevice');
+    qs('#btnAddDevice').addEventListener('click', () => modalAdd.showModal());
+    qs('#confirmAddDevice').addEventListener('click', (e) => {
+      e.preventDefault(); // évite la fermeture automatique
+      const type = qs('#newDeviceType').value;
+      const labelMap = {
+        'apple-watch': 'Apple Watch / Apple Health',
+        'health-connect': 'Android Health Connect',
+        'garmin': 'Garmin',
+        'fitbit': 'Fitbit',
+        'withings': 'Withings',
+        'autre': 'Appareil personnalisé'
+      };
+      const list = qs('.devices');
+
+      // créer un bloc simple "non connecté"
+      const article = document.createElement('article');
+      article.className = 'device';
+      article.dataset.id = type;
+      article.innerHTML = `
+        <div class="d-head">
+          <div class="d-ico">🔌</div>
+          <div>
+            <h4>${labelMap[type] || type}</h4>
+            <small class="muted">Ajouté manuellement</small>
+          </div>
+        </div>
+        <div class="d-actions">
+          <span class="state off">Non connecté</span>
+          <button class="btn-primary action-connect">Connecter</button>
+        </div>
+      `;
+      list.appendChild(article);
+      modalAdd.close();
+      showToast('Appareil ajouté');
+    });
+
+    // connecter / déconnecter (démo)
+    document.addEventListener('click', (e) => {
+      const connectBtn = e.target.closest('.action-connect');
+      const disconnectBtn = e.target.closest('.action-disconnect');
+      if (connectBtn) {
+        const device = connectBtn.closest('.device');
+        device.classList.add('connected');
+        device.querySelector('.state').textContent = 'Connecté';
+        device.querySelector('.state').className = 'state ok';
+        connectBtn.outerHTML = '<button class="btn-outline action-disconnect">Déconnecter</button>';
+        showToast('Appareil connecté');
+      } else if (disconnectBtn) {
+        const device = disconnectBtn.closest('.device');
+        device.classList.remove('connected');
+        device.querySelector('.state').textContent = 'Non connecté';
+        device.querySelector('.state').className = 'state off';
+        disconnectBtn.outerHTML = '<button class="btn-primary action-connect">Connecter</button>';
+        showToast('Appareil déconnecté');
+      }
+    });
+
+    // ---- demandes : onglets (topics) ----
+    qsa('.topic').forEach(t => {
+      t.addEventListener('click', () => {
+        qsa('.topic').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+      });
+    });
+
+    // soumission de demande
+    qs('#formRequest').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const topic = qs('.topic.active')?.dataset.topic || 'autre';
+      const subject = qs('#subject').value.trim();
+      const priority = qs('#priority').value;
+      const desc = qs('#desc').value.trim();
+
+      if (!subject) {
+        showToast('Veuillez saisir un sujet');
+        qs('#subject').focus();
+        return;
+      }
+
+      const li = document.createElement('li');
+      const now = new Date().toLocaleString('fr-FR');
+      li.innerHTML = `<strong>[${topic}]</strong> ${subject} — <em>${priority}</em> <br><small class="muted">${now}</small>${desc ? '<br>'+desc : ''}`;
+      qs('#historyList').prepend(li);
+
+      e.target.reset();
+      showToast('Demande envoyée');
+    });
+
+    // ---- confidentialité : export JSON & suppression (démo) ----
+    qs('#btnExport').addEventListener('click', () => {
+      const data = {
+        infos: {
+          prenom: qs('#fn').value,
+          nom: qs('#ln').value,
+          email: qs('#email').value,
+          phone: qs('#phone').value,
+          birth: qs('#birth').value,
+          gender: qs('#gender').value,
+          height: qs('#height').value,
+          weight: qs('#weight').value,
+          blood: qs('#blood').value,
+          doctor: qs('#doctor').value,
+          allergies: qs('#allergies').value,
+          conditions: qs('#conditions').value,
+          addr: qs('#addr').value,
+        },
+        health: {
+          goalSteps: qs('#goalSteps').value,
+          goalHydro: qs('#goalHydro').value,
+          goalSleep: qs('#goalSleep').value,
+          goalWeight: qs('#goalWeight').value,
+          remindHydro: qs('#remindHydro').checked,
+          remindActivity: qs('#remindActivity').checked,
+          remindSleep: qs('#remindSleep').checked
+        },
+        privacy: {
+          sharePro: qs('#sharePro').checked,
+          shareEmergency: qs('#shareEmergency').checked,
+          shareResearch: qs('#shareResearch').checked
+        }
+      };
+
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'zenconnect_profile.json';
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('Export JSON démarré');
+    });
+
+    qs('#btnDelete').addEventListener('click', () => {
+      const ok = confirm('Voulez-vous vraiment supprimer votre compte ? (démo)');
+      if (ok) showToast('Suppression (démo)');
+    });
+
+    // Affichage initial
+    showPanel('#p-infos');
+  </script>
+</body>
+</html>

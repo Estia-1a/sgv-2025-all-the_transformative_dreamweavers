@@ -1,7 +1,3 @@
-
-/* ==================== NOUVEAU HEADER (MENU) ==================== */
-
-/* Container du menu */
 .menu {
   background: #ffffff;
   padding: 0px;
@@ -53,7 +49,7 @@
   color: #000;
   border-left: 1px solid #eff3f1;
 }
-#limasse {
+#limasse1 {
   margin-bottom: 0px;
 }
 /* Bordure droite pour le groupe “Professionnels” (option esthétique) */
@@ -62,7 +58,7 @@
 }
 
 /* Hover du premier niveau */
-#Bandeau1 > li > a:not(#limasse):hover {
+#Bandeau1 > li > a:not(#limasse1):hover {
   background-color: #0fb88a;
   color: #fff;
   box-shadow: inset 0 -3px 0 rgba(255,255,255,0.35);
