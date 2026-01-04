@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/moncompte.css" media="screen and (min-width: 768px)"> 
+    <link rel="stylesheet" href="../styles/mobile.css" media="screen and (max-width: 767px)">
+    <title>ZenConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="menu">
+            <ul id="Bandeau1">
+                <li><img id="MainLogo" src="media/pictures/ZENCONNECT_LOGO_NOM.png" alt="MainLogo"></li>
+                <li class="BandeauPart">
+                    <a href="Particuliers.html">Particuliers</a>
+                    <ul class="BandeauPart2">
+                        <li><a href="Particuliers.html">Professionnels</a></li>
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="MesDonnees.html">Mes Donnees</a></li>
+                        <li><a href="ResumeDuMois.html">Resume Du Mois</a></li>
+                    </ul>
+                </li>
+                <li class="BandeauPro">
+                    <a href="Professionnels.html">Professionnels</a>
+                    <ul class="BandeauPro2">
+                        <li><a href="Professionnels.html">Professionnels</a></li>
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="MesClients.html">Mes Clients</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>  
+    </header>
+    <main class="auth-wrap">
+        <section class="auth-card" role="region" aria-label="Authentification">
+        <!-- Onglets -->
+        <div class="tabs" role="tablist">
+            <button class="tab active" role="tab" aria-selected="true" data-target="#signin">Se connecter</button>
+            <button class="tab" role="tab" aria-selected="false" data-target="#signup">Créer un compte</button>
+        </div>
+
+        <!-- Sélecteur d’identité -->
+        <div class="persona">
+            <span>Je suis :</span>
+            <div class="segmented">
+            <input type="radio" name="persona" id="perso" value="particulier" checked>
+            <label for="perso">Particulier</label>
+
+            <input type="radio" name="persona" id="pro" value="professionnel">
+            <label for="pro">Professionnel</label>
+            </div>
+        </div>
+
+        <!-- Formulaire Connexion -->
+        <form id="signin" class="form active" novalidate>
+            <div class="field">
+            <label for="email-signin">Email</label>
+            <input type="email" id="email-signin" name="email" placeholder="votre@email.fr" required>
+            </div>
+
+            <div class="field password">
+            <label for="password-signin">Mot de passe</label>
+            <input type="password" id="password-signin" name="password" placeholder="••••••••" required minlength="8">
+            <button type="button" class="toggle-pass" aria-label="Afficher / masquer le mot de passe">👁️</button>
+            </div>
+
+            <!-- Champs contextuels (ex: identifiant pro) -->
+            <div class="context context-pro hidden">
+            <div class="field">
+                <label for="idpro-signin">Identifiant professionnel (optionnel)</label>
+                <input type="text" id="idpro-signin" name="idpro" placeholder="ID interne / n° RPPS / SIRET" />
+            </div>
+            </div>
+
+            <div class="actions">
+            <a href="#" class="link">Mot de passe oublié ?</a>
+            <button type="submit" class="btn-primary">Se connecter</button>
+            </div>
+
+            <div class="alt-login">
+            <button type="button" class="btn-outline">S’identifier avec Google</button>
+            <button type="button" class="btn-outline">S’identifier avec Microsoft</button>
+            </div>
+        </form>
+
+        <!-- Formulaire Création -->
+        <form id="signup" class="form" novalidate>
+            <div class="grid">
+            <div class="field">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+            </div>
+            <div class="field">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            </div>
+
+            <div class="field">
+            <label for="email-signup">Email</label>
+            <input type="email" id="email-signup" name="email" placeholder="votre@email.fr" required>
+            </div>
+
+            <div class="grid">
+            <div class="field password">
+                <label for="password-signup">Mot de passe</label>
+                <input type="password" id="password-signup" name="password" placeholder="••••••••" required minlength="8">
+                <button type="button" class="toggle-pass" aria-label="Afficher / masquer le mot de passe">👁️</button>
+                <small class="hint">8+ caractères, une majuscule, un chiffre.</small>
+            </div>
+            <div class="field">
+                <label for="password-confirm">Confirmer le mot de passe</label>
+                <input type="password" id="password-confirm" name="password_confirm" placeholder="••••••••" required minlength="8">
+            </div>
+            </div>
+
+            <!-- Champs spécifiques selon identité -->
+            <div class="context context-part">
+            <div class="field">
+                <label for="naissance">Date de naissance</label>
+                <input type="date" id="naissance" name="naissance">
+            </div>
+            </div>
+
+            <div class="context context-pro hidden">
+            <div class="field">
+                <label for="etab">Établissement / Cabinet</label>
+                <input type="text" id="etab" name="etablissement" placeholder="Nom de l’établissement" />
+            </div>
+            <div class="field">
+                <label for="siret">N° SIRET / RPPS</label>
+                <input type="text" id="siret" name="siret" placeholder="Ex : 123 456 789 00010">
+            </div>
+            <div class="field">
+                <label for="specialite">Spécialité</label>
+                <input type="text" id="specialite" name="specialite" placeholder="Ex : Médecin généraliste">
+            </div>
+            </div>
+
+            <div class="consent">
+            <label>
+                <input type="checkbox" name="cgu" required>
+                J’accepte les <a href="#" class="link">CGU</a> et la <a href="#" class="link">politique de confidentialité</a>.
+            </label>
+            </div>
+
+            <div class="actions">
+            <button type="submit" class="btn-primary">Créer mon compte</button>
+            </div>
+        </form>
+        </section>
+    </main>
+
+    <!-- Footer (tu peux garder le tien tel quel) -->
+    <footer>
+        <!-- … ton footer existant … -->
+    </footer>
+
+    <!-- JS simple pour les interactions -->
+    <script>
+        // Onglets
+        const tabs = document.querySelectorAll('.tab');
+        const forms = document.querySelectorAll('.form');
+        tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            forms.forEach(f => f.classList.remove('active'));
+            const target = document.querySelector(tab.dataset.target);
+            target.classList.add('active');
+        });
+        });
+
+        // Sélecteur Particulier / Professionnel
+        const personaInputs = document.querySelectorAll('input[name="persona"]');
+        function updatePersona() {
+        const value = document.querySelector('input[name="persona"]:checked').value;
+        document.querySelectorAll('.context-part').forEach(el => el.classList.toggle('hidden', value !== 'particulier'));
+        document.querySelectorAll('.context-pro').forEach(el => el.classList.toggle('hidden', value !== 'professionnel'));
+        }
+        personaInputs.forEach(r => r.addEventListener('change', updatePersona));
+        updatePersona();
+
+        // Afficher / masquer mot de passe
+        document.querySelectorAll('.toggle-pass').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const input = btn.previousElementSibling;
+            input.type = input.type === 'password' ? 'text' : 'password';
+        });
+        });
+
+        // Validation simple "confirm password"
+        const pass = document.getElementById('password-signup');
+        const pass2 = document.getElementById('password-confirm');
+        function checkConfirm() {
+        if (!pass || !pass2) return;
+        pass2.setCustomValidity(pass.value !== pass2.value ? 'Les mots de passe ne correspondent pas' : '');
+        }
+        if (pass && pass2) {
+        pass.addEventListener('input', checkConfirm);
+        pass2.addEventListener('input', checkConfirm);
+        }
+
+        // Empêcher envoi (démo)
+        document.querySelectorAll('form').forEach(f => {
+        f.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Formulaire prêt : Connecter au backend / API ici.');
+        });
+        });
+    </script>
+    <footer>
+        <section id="top_footer">
+            <div id="Reseaux_sociaux">
+                <div id="Ecriture">
+                        <h1>Vous pouvez nous contacter</h1> 
+                        <p>Suivez-nous sur :</p>
+                </div>
+                <div id="Logo">
+                    <div id="LogoX">
+                        <a href="https://x.com/Cristiano"><img src="../media/pictures/X-filaire.svg" alt="Notre X"></a>
+                    </div>
+                    <div id="LogoFacebook">
+                        <a href="https://www.facebook.com/Cristiano/"><img src="../media/pictures/Facebook-filaire.svg" alt="Notre Facebook"></a>   
+                    </div>       
+                </div> 
+            </div>
+            <div id="Nous_Contacter">
+                <div id="Ecriture2">
+                    <h1>Nous sommes joignables</h1>
+                    <p>Par téléphone, sur place ou par courriel, choisissez !</p>     
+                </div>
+                <a id="Contacter" href="https://www.linkedin.com/in/thomas-claverie-abp/?originalSubdomain=fr" class="btn-contact">Nous contacter</a>
+            </div>
+
+        </section>
+        <section id="footer">
+            <div id="lien_utile">
+                <div class="colonne">
+                    <h4>Espace</h4>
+                    <ul id="espace"> 
+                        <li> Patient </li>
+                        <li> Professionnel de santé </li>
+
+                    </ul>
+                </div>
+                <div class="colonne">
+                    <h4>Informations</h4>
+                    <ul id="informations">
+                        <li> Mentions légales </li>
+                        <li> Plan du site </li>
+                        <li> Foire aux questions </li>
+                    </ul>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div id="information">
+                <ul id="barre_navigation">
+                    <li>PRESSE</li>
+                    <li>EMPLOIS ET CARRIÈRES</li>
+                    <li>RECHERCHE ET STATISTIQUES</li>
+                    <li>INTERNATIONAL</li>
+                    <li>MARCHÉS PUBLICS</li>
+                </ul>
+            </div>
+
+        </section>
+        <div id="parseval">
+            <div id="un">
+                Copyright © 2025 ZenConnect.net
+            </div>
+            <div id="deux">
+                ZenConnect France
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>
