@@ -4,7 +4,7 @@
 /* Container du menu */
 .menu {
   background: #00a97a;
-  padding: 0px 10px;
+  padding: 0px;
   /* option : fixer la hauteur si besoin */
   /* min-height: 70px; */
 }
@@ -23,7 +23,7 @@
   display: block;
   width: 60px;
   height: auto;
-  margin: 5px 10px 0 0; /* reprends la logique de #LogoAccueil */
+  margin: 0px 10px; /* reprends la logique de #LogoAccueil */
 }
 
 /* Items de premier niveau */
@@ -57,6 +57,24 @@
   transform: translateY(-1px);
   transition: background-color 200ms ease, transform 200ms ease, color 200ms ease;
 }
+
+#MonCompteLogo {
+    width: 60px;
+    margin-bottom: -5px;
+    margin-left: 0px;
+}
+
+#MonCompte {
+    display: flex;
+    margin-left: auto;
+    flex-direction: column;
+    margin-top: -20px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    margin-bottom: -22px;
+}
+
 
 /* ==================== SOUS-MENUS ==================== */
 
