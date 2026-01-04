@@ -5,6 +5,7 @@
 .menu {
   background: #ffffff;
   padding: 0px;
+  border-radius: 14px;
   /* option : fixer la hauteur si besoin */
   /* min-height: 70px; */
 
