@@ -1,260 +1,438 @@
-                                         /*Partie Header*/
+
+/* ==================== HEADER ==================== */
 header {
-    padding: 10px;
-    background: #00a97a;
-    height: 70px;
+  padding: 10px;
+  background: #00a97a;
+  height: 70px;
 }
+
 #Bandeau1 {
-    display: flex;
-    align-items: center;
-    margin-top: -10px;
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
 }
 
-.menu ul a{
-    display: flex;
-    display: block;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    align-items: center;
-    height: 70px;
-    font-family: 'Poppins', sans-serif;
+/* Menu : un seul display cohérent */
+.menu ul a {
+  display: inline-flex;           /* aligne icône + texte sur une ligne */
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  height: 70px;
+  font-family: 'Poppins', sans-serif;
 }
+
 #Professionnels {
-    border-left: 1px solid #eff3f1;
-    border-right: 1px solid #eff3f1;
-    padding: 20px;
-    margin: 0;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
+  border-left: 1px solid #eff3f1;
+  border-right: 1px solid #eff3f1;
+  padding: 20px;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
 
-}
 #Particuliers {
-    border-left: 1px solid #eff3f1;
-    padding: 20px;
-    margin: 0;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
+  border-left: 1px solid #eff3f1;
+  padding: 20px;
+  margin: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
 }
-#Particuliers:hover {
-  background-color: #0fb88a;
-  color: #fff;
-  box-shadow: inset 0 -3px 0 rgba(255,255,255,0.35);
-  transform: translateY(-1px);
-}
+
+#Particuliers:hover,
 #Professionnels:hover {
   background-color: #0fb88a;
   color: #fff;
   box-shadow: inset 0 -3px 0 rgba(255,255,255,0.35);
   transform: translateY(-1px);
 }
-#Bandeau1 a[href="Particuliers.html"]:hover ~ #BandeauPart {
-    display: block;
-    background-color: #074735;
-}
-#Bandeau1 a[href="Professionnels.html"]:hover ~ #BandeauPro {
-    display: block;
-}
+
+/* Ces sélecteurs ne s'appliquent pas (éléments absents) → retirés
+#Bandeau1 a[href="Particuliers.html"]:hover ~ #BandeauPart { ... }
+#Bandeau1 a[href="Professionnels.html"]:hover ~ #BandeauPro { ... }
+*/
+
 #LogoAccueil {
-    width: 80px;
-    margin-right: 10px;
-    margin-top: 2.5px;
+  width: 80px;
+  margin-right: 10px;
+  margin-top: 2.5px;
 }
+
 #MonCompteLogo {
-    width: 60px;
-    margin-bottom: -5px;
-    margin-left: 20px;
+  width: 60px;
+  margin-bottom: -5px;
+  margin-left: 20px;
 }
+
 #MonCompte {
-    display: flex;
-    margin-left: auto;
-    flex-direction: column;
-    margin-top: -20px;
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    margin-bottom: -15px;
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  margin-top: -20px;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  margin-bottom: -15px;
 }
+
 #MonCompte:hover {
-    color: #fff;
-    transform: translateY(-1px);
+  color: #fff;
+  transform: translateY(-1px);
 }
-                                        /*Partie footer Haut */
+
+/* Transitions douces sur les liens du header */
+#Particuliers, #Professionnels, #MonCompte {
+  transition: background-color 200ms ease, transform 200ms ease, color 200ms ease;
+}
+
+/* ==================== GLOBAL ==================== */
 body {
-    margin: 0;
-    padding: 0;
-    height: 500vh;
-}                                 
-                                       /*Partie footer Haut */
-#top_footer {
-    display: flex;  
-    justify-content: flex-start;
-    background-color: #eff3f1;
-    height: 300px;
-    margin: 0;
-    
+  margin: 0;
+  padding: 0;
+  height: auto; /* remplace 500vh pour éviter le scroll géant */
 }
-#Reseaux_sociaux {
-    background-color: #00a97a;
-    padding: 16px;
-    display: flex;
-    justify-content: flex-start;
-    width: 250px;
-    flex-direction: column;
-    gap: 10px;
-    height: 450px;
+
+/* Accessibilité : focus visible */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid rgba(0,169,122,0.5);
+  outline-offset: 2px;
 }
-#Logo img{  
-    width: auto;  
+
+/* Icônes : animation plus douce */
+#Logo img {
+  width: auto;
+  transition: transform 200ms ease;
 }
-#Logo {   
-    display: flex;  
-    justify-content: flex-start;         
-    gap: 20px;
-    background-color: #00a97a;
+
+#Logo {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: #00a97a;
 }
-#LogoX img{
-    width: 50px;
-}
+
+#LogoX img { width: 50px; }
+#LogoFacebook img { width: 50px; }
+
 #Logo img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-#LogoFacebook img{
-    width: 50px   
+
+/* ==================== FOOTER HAUT ==================== */
+#top_footer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #eff3f1;
+  height: auto; /* au lieu de 300px fixe */
+  margin: 0;
+}
+
+#Reseaux_sociaux {
+  background-color: #00a97a;
+  padding: 16px;
+  display: flex;
+  justify-content: flex-start;
+  width: 250px;
+  flex-direction: column;
+  gap: 10px;
+  height: auto; /* au lieu de 450px fixe */
 }
 
 #Ecriture {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 #Ecriture h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
 }
+
 #Ecriture p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
 }
+
 #Nous_Contacter {
-    align-items: center;
-    display: flex;  
-    justify-content: flex-start;
-    margin-left: 50px;
-    flex-direction: column;
-    gap: 20px;
-    margin-top:75px;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 75px;
 }
+
 #Ecriture2 h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: x-large;
+  font-family: 'Poppins', sans-serif;
+  font-size: x-large;
 }
+
 #Ecriture2 p {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-#Contacter {
-    font-family: 'Poppins', sans-serif;
-    font-size: large;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
+
+#Contacter,
 #Contacter1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: large;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
 }
+
 .btn-contact {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #00a97a;
-    width: 200px; 
-    height: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-    border: none;       
-    gap: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a97a;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  gap: 20px;
 }
+
 .btn-contact:hover {
-    background-color: #074735;
+  background-color: #074735;
 }
-                                         /*Partie Footer BAS*/
+
+/* ==================== FOOTER BAS ==================== */
 #lien_utile {
-    display: flex;  
-    justify-content: center;
-    margin-left: 50px;
-    gap: 100px;
-    background-color: #00a9793c;
-    font-family: Georgia, 'Akrobat', Times, serif;
-    font-weight: 500;
-    margin: 0;
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  gap: 100px;
+  background-color: #00a9793c;
+  font-family: Georgia, 'Akrobat', Times, serif;
+  font-weight: 500;
+  margin: 0;
 }
-.colonne li {
-    gap: 100px;
-    margin-bottom: 20px;
-}
+
 .colonne h4 {
-    margin-bottom: 60px;
-    margin-left: 37px;
-    font-size: 20px;
-    font-weight: 800;
+  margin-bottom: 60px;
+  margin-left: 37px;
+  font-size: 20px;
+  font-weight: 800;
 }
+
+.colonne ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colonne li {
+  margin-bottom: 20px;
+}
+
+/* Barre navigation */
 #information {
-    display: flex;  
-    justify-content: center;
-    margin-left: 50px;
-    background-color: #00a9793c;
-    margin: 0;
-    list-style: none;
-    font-weight: 800;
-    
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  background-color: #00a9793c;
+  margin: 0;
+  list-style: none;
+  font-weight: 800;
 }
+
 #barre_navigation {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    flex-wrap: wrap;
-    gap: 80px;
-    margin-top: 50px;
-
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-top: 50px;
+  margin: 0;
+  padding: 0;
 }
+
 #barre_navigation li {
-    display: inline-block;
-    margin-right: 20px;
-    font-family: Georgia, 'Akrobat', Times, serif;
+  display: inline-block;
+  margin-right: 20px;
+  font-family: Georgia, 'Akrobat', Times, serif;
 }
-li {
-    list-style: none;
-    display: flex;
-}
-                                         /*Partie Footer final*/
+
+/* Règle globale <li> retirée (c’était source de conflits) */
+/* li { list-style: none; display: flex; } */
+
+/* ==================== FOOTER FINAL ==================== */
 #parseval {
-    display: inline-block;
-    display: flex;
-    justify-content: space-between;
-
+  display: flex;                 /* un seul display, cohérent */
+  justify-content: space-between;
 }
+
 #un {
-    font-weight: 600;
-    width: 400px;
-    margin-left: 20px;
-}
-#deux {
-    font-weight: 600;
-    width: 400px;
-    text-align: right;
-    margin-right: 20px ; 
+  font-weight: 600;
+  width: 400px;
+  margin-left: 20px;
 }
 
+#deux {
+  font-weight: 600;
+  width: 400px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+/* ==================== CONTENU BODY (BASIQUE) ==================== */
+/* Conteneur principal */
+#Upper-body {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Accroche h1 {
+  font-size: 2rem;
+  margin: 0 0 16px;
+}
+
+.Accroche p { color: #444; }
+
+/* Liste + bouton */
+.Liste-bouton,
+.Liste + .Bouton,
+.Liste-bouton .Bouton {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.Liste {
+  flex: 1 1 480px;
+  background: #eff3f1;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.Liste h1, .Liste h2 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+}
+
+.Liste ul {
+  margin: 0;
+  padding: 0 0 0 18px;
+  list-style: disc;
+}
+
+.Liste li {
+  margin: 8px 0;
+  color: #333;
+}
+
+.Bouton {
+  flex: 0 0 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Espace-santé {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 240px;
+  height: 52px;
+  padding: 0 18px;
+  background-color: #00a97a;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+  text-decoration: none;
+}
+
+.Espace-santé:hover {
+  background-color: #074735;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(7,71,53,0.25);
+}
+
+/* FAQ */
+.FAQ-section {
+  margin: 32px auto;
+  padding: 20px;
+  max-width: 1100px;
+  background: #f7faf9;
+  border-radius: 12px;
+}
+
+.FAQ-header {
+  margin: 0 0 12px;
+  font-size: 1.6rem;
+}
+
+.FAQ-item {
+  margin: 12px 0;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.FAQ-item > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.FAQ-item > p {
+  margin: 8px 0 0;
+  color: #444;
+}
+
+.FAQ-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.FAQ-button {
+  background: transparent;
+  border: 2px solid #00a97a;
+  color: #00a97a;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.FAQ-button:hover {
+  background: #00a97a;
+  color: #fff;
+}
+
+/* Intro */
+#Intro-section {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 24px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  #Upper-body { padding: 16px; }
+  .Accroche h1 { font-size: 1.6rem; }
+  .Bouton { flex: 1 1 100%; }
+  .Espace-santé { width: 100%; }
+}
