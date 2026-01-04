@@ -4,7 +4,7 @@
 /* Container du menu */
 .menu {
   background: #00a97a;
-  padding: 0 12px;
+  padding: 0px 10px;
   /* option : fixer la hauteur si besoin */
   /* min-height: 70px; */
 }
@@ -13,7 +13,6 @@
 #Bandeau1 {
   display: flex;
   align-items: center;
-  gap: 8px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -22,9 +21,9 @@
 /* Logo principal */
 #MainLogo {
   display: block;
-  width: 80px;
+  width: 60px;
   height: auto;
-  margin: 4px 10px 0 0; /* reprends la logique de #LogoAccueil */
+  margin: 5px 10px 0 0; /* reprends la logique de #LogoAccueil */
 }
 
 /* Items de premier niveau */
@@ -36,7 +35,7 @@
 #Bandeau1 > li > a {
   display: inline-flex;
   align-items: center;
-  height: 50px;
+  height: 80px;
   padding: 0 20px;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
@@ -170,14 +169,11 @@
 }
 
 
-
-
-
 /* ==================== GLOBAL ==================== */
 body {
   margin: 0;
   padding: 0;
-  height: auto; /* remplace 500vh pour éviter le scroll géant */
+  height: auto;
 }
 
 /* Accessibilité : focus visible */
@@ -207,166 +203,7 @@ button:focus-visible {
   transform: scale(1.05);
 }
 
-/* ==================== FOOTER HAUT ==================== */
-#top_footer {
-  display: flex;
-  justify-content: flex-start;
-  background-color: #eff3f1;
-  height: auto; /* au lieu de 300px fixe */
-  margin: 0;
-}
 
-#Reseaux_sociaux {
-  background-color: #00a97a;
-  padding: 16px;
-  display: flex;
-  justify-content: flex-start;
-  width: 250px;
-  flex-direction: column;
-  gap: 10px;
-  height: auto; /* au lieu de 450px fixe */
-}
-
-#Ecriture {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
-#Ecriture h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 40px;
-}
-
-#Ecriture p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-}
-
-#Nous_Contacter {
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 50px;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 75px;
-}
-
-#Ecriture2 h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: x-large;
-}
-
-#Ecriture2 p {
-  font-family: 'Poppins', sans-serif;
-}
-
-#Contacter,
-#Contacter1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: large;
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
-
-.btn-contact {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #00a97a;
-  width: 200px;
-  height: 50px;
-  cursor: pointer;
-  transition: 0.3s;
-  border: none;
-  gap: 20px;
-}
-
-.btn-contact:hover {
-  background-color: #074735;
-}
-
-/* ==================== FOOTER BAS ==================== */
-#lien_utile {
-  display: flex;
-  justify-content: center;
-  margin-left: 50px;
-  gap: 100px;
-  background-color: #00a9793c;
-  font-family: Georgia, 'Akrobat', Times, serif;
-  font-weight: 500;
-  margin: 0;
-}
-
-.colonne h4 {
-  margin-bottom: 60px;
-  margin-left: 37px;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.colonne ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.colonne li {
-  margin-bottom: 20px;
-}
-
-/* Barre navigation */
-#information {
-  display: flex;
-  justify-content: center;
-  margin-left: 50px;
-  background-color: #00a9793c;
-  margin: 0;
-  list-style: none;
-  font-weight: 800;
-}
-
-#barre_navigation {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  flex-wrap: wrap;
-  gap: 80px;
-  margin-top: 50px;
-  margin: 0;
-  padding: 0;
-}
-
-#barre_navigation li {
-  display: inline-block;
-  margin-right: 20px;
-  font-family: Georgia, 'Akrobat', Times, serif;
-}
-
-/* Règle globale <li> retirée (c’était source de conflits) */
-/* li { list-style: none; display: flex; } */
-
-/* ==================== FOOTER FINAL ==================== */
-#parseval {
-  display: flex;                 /* un seul display, cohérent */
-  justify-content: space-between;
-}
-
-#un {
-  font-weight: 600;
-  width: 400px;
-  margin-left: 20px;
-}
-
-#deux {
-  font-weight: 600;
-  width: 400px;
-  text-align: right;
-  margin-right: 20px;
-}
 
 /* ==================== CONTENU BODY (BASIQUE) ==================== */
 /* Conteneur principal */
@@ -515,4 +352,166 @@ button:focus-visible {
   .Accroche h1 { font-size: 1.6rem; }
   .Bouton { flex: 1 1 100%; }
   .Espace-santé { width: 100%; }
+}
+
+
+/* ==================== FOOTER HAUT ==================== */
+#top_footer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #eff3f1;
+  height: 300px;
+  margin: 0;
+}
+
+#Reseaux_sociaux {
+    background-color: #00a97a;
+    padding: 16px;
+    display: flex;
+    justify-content: flex-start;
+    width: 250px;
+    flex-direction: column;
+    gap: 10px;
+    height: 450px;
+}
+
+#Ecriture {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+#Ecriture h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+}
+
+#Ecriture p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+}
+
+#Nous_Contacter {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 75px;
+}
+
+#Ecriture2 h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: x-large;
+}
+
+#Ecriture2 p {
+  font-family: 'Poppins', sans-serif;
+}
+
+#Contacter,
+#Contacter1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.btn-contact {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a97a;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  gap: 20px;
+}
+
+.btn-contact:hover {
+  background-color: #074735;
+}
+
+
+/* ==================== FOOTER BAS ==================== */
+#lien_utile {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  gap: 100px;
+  background-color: #00a9793c;
+  font-family: Georgia, 'Akrobat', Times, serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.colonne h4 {
+  margin-bottom: 60px;
+  margin-left: 37px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.colonne ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colonne li {
+  margin-bottom: 20px;
+}
+
+/* Barre navigation */
+#information {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  background-color: #00a9793c;
+  margin: 0;
+  list-style: none;
+  font-weight: 800;
+}
+
+#barre_navigation {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 80px;
+  margin-top: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+#barre_navigation li {
+  display: inline-block;
+  margin-right: 20px;
+  font-family: Georgia, 'Akrobat', Times, serif;
+}
+
+
+
+/* ==================== FOOTER FINAL ==================== */
+#parseval {
+  display: flex;                 /* un seul display, cohérent */
+  justify-content: space-between;
+}
+
+#un {
+  font-weight: 600;
+  width: 400px;
+  margin-left: 20px;
+}
+
+#deux {
+  font-weight: 600;
+  width: 400px;
+  text-align: right;
+  margin-right: 20px;
 }
