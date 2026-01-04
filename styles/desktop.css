@@ -1,97 +1,177 @@
 
-/* ==================== HEADER ==================== */
-header {
-  padding: 10px;
+/* ==================== NOUVEAU HEADER (MENU) ==================== */
+
+/* Container du menu */
+.menu {
   background: #00a97a;
-  height: 70px;
+  padding: 0 12px;
+  /* option : fixer la hauteur si besoin */
+  /* min-height: 70px; */
 }
 
+/* Liste principale */
 #Bandeau1 {
   display: flex;
   align-items: center;
-  margin-top: -10px;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Menu : un seul display cohérent */
-.menu ul a {
-  display: inline-flex;           /* aligne icône + texte sur une ligne */
+/* Logo principal */
+#MainLogo {
+  display: block;
+  width: 80px;
+  height: auto;
+  margin: 4px 10px 0 0; /* reprends la logique de #LogoAccueil */
+}
+
+/* Items de premier niveau */
+#Bandeau1 > li {
+  position: relative; /* nécessaire pour positionner les sous-menus */
+}
+
+/* Liens de premier niveau */
+#Bandeau1 > li > a {
+  display: inline-flex;
   align-items: center;
+  height: 50px;
+  padding: 0 20px;
   text-decoration: none;
-  color: black;
-  height: 70px;
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #000;
+  border-left: 1px solid #eff3f1;
 }
 
-#Professionnels {
-  border-left: 1px solid #eff3f1;
+/* Bordure droite pour le groupe “Professionnels” (option esthétique) */
+#Bandeau1 > li.BandeauPro > a {
   border-right: 1px solid #eff3f1;
-  padding: 20px;
-  margin: 0;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
 }
 
-#Particuliers {
-  border-left: 1px solid #eff3f1;
-  padding: 20px;
-  margin: 0;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-}
-
-#Particuliers:hover,
-#Professionnels:hover {
+/* Hover du premier niveau */
+#Bandeau1 > li > a:hover {
   background-color: #0fb88a;
   color: #fff;
   box-shadow: inset 0 -3px 0 rgba(255,255,255,0.35);
   transform: translateY(-1px);
-}
-
-/* Ces sélecteurs ne s'appliquent pas (éléments absents) → retirés
-#Bandeau1 a[href="Particuliers.html"]:hover ~ #BandeauPart { ... }
-#Bandeau1 a[href="Professionnels.html"]:hover ~ #BandeauPro { ... }
-*/
-
-#LogoAccueil {
-  width: 80px;
-  margin-right: 10px;
-  margin-top: 2.5px;
-}
-
-#MonCompteLogo {
-  width: 60px;
-  margin-bottom: -5px;
-  margin-left: 20px;
-}
-
-#MonCompte {
-  display: flex;
-  margin-left: auto;
-  flex-direction: column;
-  margin-top: -20px;
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  text-decoration: none;
-  margin-bottom: -15px;
-}
-
-#MonCompte:hover {
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-/* Transitions douces sur les liens du header */
-#Particuliers, #Professionnels, #MonCompte {
   transition: background-color 200ms ease, transform 200ms ease, color 200ms ease;
 }
+
+/* ==================== SOUS-MENUS ==================== */
+
+/* Sous-menus (cachés par défaut) */
+.BandeauPart2,
+.BandeauPro2 {
+  position: absolute;
+  top: 100%;           /* juste sous l’item parent */
+  left: 0;
+  min-width: 220px;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  display: none;       /* caché par défaut */
+  z-index: 1000;
+}
+
+/* Affichage au survol du li parent */
+.BandeauPart:hover > .BandeauPart2,
+.BandeauPro:hover > .BandeauPro2 {
+  display: block;
+}
+
+/* Items du sous-menu */
+.BandeauPart2 li,
+.BandeauPro2 li {
+  display: block;
+}
+
+/* Liens du sous-menu */
+.BandeauPart2 a,
+.BandeauPro2 a {
+  display: block;
+  padding: 10px 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: #222;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Hover du sous-menu */
+.BandeauPart2 a:hover,
+.BandeauPro2 a:hover {
+  background: #f2fbf7;
+  color: #074735;
+}
+
+/* Petit séparateur visuel en haut du dropdown (optionnel) */
+.BandeauPart2::before,
+.BandeauPro2::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 24px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+  transform: rotate(45deg);
+}
+
+/* ==================== ACCESSIBILITÉ ==================== */
+.menu a:focus-visible {
+  outline: 3px solid rgba(0,169,122,0.5);
+  outline-offset: 2px;
+}
+
+/* ==================== RESPONSIVE BASIQUE ==================== */
+@media (max-width: 767px) {
+  /* Empile le menu en mobile */
+  #Bandeau1 {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  #MainLogo {
+    width: 64px;
+    margin: 4px 8px 0 0;
+  }
+
+  #Bandeau1 > li > a {
+    height: 44px;
+    padding: 0 14px;
+    border-left: none;
+    border-right: none;
+  }
+
+  /* Sous-menus en mobile : pleine largeur sous l’item */
+  .BandeauPart2,
+  .BandeauPro2 {
+    position: static;
+    display: none;
+    box-shadow: none;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+    margin: 4px 0 8px;
+  }
+
+  /* Affiche au hover (sur desktop), et tu peux basculer en “tap-to-open” via JS plus tard */
+  .BandeauPart:hover > .BandeauPart2,
+  .BandeauPro:hover > .BandeauPro2 {
+    display: block;
+  }
+}
+
+
+
+
 
 /* ==================== GLOBAL ==================== */
 body {
