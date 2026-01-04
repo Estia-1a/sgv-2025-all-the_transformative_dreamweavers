@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/moncompte.css" media="screen and (min-width: 768px)"> 
+    <link rel="stylesheet" href="../styles/mobile.css" media="screen and (max-width: 767px)">
+    <title>ZenConnect</title>
+    <link rel="stylesheet" href="../styles/data.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="menu">
+            <ul id="Bandeau1">
+                <li><a id="limasse" href="../index.html"><img id="MainLogo" src="../media/pictures/ZENCONNECT_LOGO_TRSP.png" alt="MainLogo"></a></li>
+                <li class="BandeauPart">
+                    <a href="Particuliers.html">Particuliers</a>
+                    <ul class="BandeauPart2">
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="MesDonnees.html">Mes Donnees</a></li>
+                        <li><a href="ResumeDuMois.html">Resume Du Mois</a></li>
+                        <li><a href="MonCompte.html">Se Connecter</a></li>
+                    </ul>
+                </li>
+                <li class="BandeauPro">
+                    <a href="Professionnels.html">Professionnels</a>
+                    <ul class="BandeauPro2">
+                        <li><a href="MonProfil.html">Mon Profil</a></li>
+                        <li><a href="MesClients.html">Mes Clients</a></li>
+                        <li><a href="MonCompte.html">Se Connecter</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>  
+    </header>
+    <main id="data" aria-label="Mes données – Particulier">
+        <div class="data-layout">
+        <!-- Sidebar -->
+        <aside class="data-sidebar" aria-label="Navigation des métriques">
+            <h2 class="sidebar-title">Mes données</h2>
+            <nav class="data-menu">
+            <button class="menu-item active" data-target="#panel-hr" aria-current="page">❤️ Rythme cardiaque</button>
+            <button class="menu-item" data-target="#panel-steps">👟 Nombre de pas</button>
+            <button class="menu-item" data-target="#panel-stress">🧠 État de stress</button>
+            <button class="menu-item" data-target="#panel-sleep">😴 Sommeil</button>
+            <button class="menu-item" data-target="#panel-calories">🔥 Calories</button>
+            <button class="menu-item" data-target="#panel-hydration">💧 Hydratation</button>
+            </nav>
+        </aside>
+
+        <!-- Content -->
+        <section class="data-content">
+            <!-- Panneau : Rythme cardiaque -->
+            <div id="panel-hr" class="panel active" role="region" aria-label="Rythme cardiaque">
+            <header class="panel-header">
+                <h3>Rythme cardiaque</h3>
+                <div class="actions">
+                <select class="range">
+                    <option>Aujourd’hui</option>
+                    <option>7 jours</option>
+                    <option>30 jours</option>
+                </select>
+                <button class="btn-outline">Exporter</button>
+                </div>
+            </header>
+
+            <div class="cards">
+                <article class="card">
+                <h4>Actuel</h4>
+                <div class="value">72 <span>bpm</span></div>
+                <div class="sparkline">
+                    <!-- petit graphe décoratif (SVG inline) -->
+                    <svg viewBox="0 0 100 24" preserveAspectRatio="none">
+                    <polyline points="0,12 10,8 20,14 30,10 40,16 50,9 60,15 70,11 80,18 90,12 100,14" />
+                    </svg>
+                </div>
+                <p class="sub">Plage cible : 60–100 bpm</p>
+                </article>
+                <article class="card">
+                <h4>Moyenne jour</h4>
+                <div class="value">76 <span>bpm</span></div>
+                <p class="sub ok">Stable</p>
+                </article>
+                <article class="card">
+                <h4>Repos</h4>
+                <div class="value">64 <span>bpm</span></div>
+                <p class="sub warn">Légèrement élevé</p>
+                </article>
+            </div>
+            </div>
+
+            <!-- Panneau : Nombre de pas -->
+            <div id="panel-steps" class="panel" role="region" aria-label="Nombre de pas">
+            <header class="panel-header">
+                <h3>Nombre de pas</h3>
+                <div class="actions">
+                <select class="range">
+                    <option>Aujourd’hui</option>
+                    <option>7 jours</option>
+                    <option>30 jours</option>
+                </select>
+                <button class="btn-outline">Exporter</button>
+                </div>
+            </header>
+
+            <div class="cards">
+                <article class="card">
+                <h4>Pas du jour</h4>
+                <div class="value">8 450 <span>pas</span></div>
+                <div class="progress"><div style="width: 84%"></div></div>
+                <p class="sub">Objectif : 10 000 pas</p>
+                </article>
+                <article class="card">
+                <h4>Moyenne semaine</h4>
+                <div class="value">7 320 <span>pas</span></div>
+                <p class="sub ok">+12% vs semaine dernière</p>
+                </article>
+                <article class="card">
+                <h4>Distance estimée</h4>
+                <div class="value">6,1 <span>km</span></div>
+                <p class="sub">Basé sur longueur de foulée</p>
+                </article>
+            </div>
+            </div>
+
+            <!-- Panneau : État de stress -->
+            <div id="panel-stress" class="panel" role="region" aria-label="État de stress">
+            <header class="panel-header">
+                <h3>État de stress</h3>
+                <div class="actions">
+                <select class="range">
+                    <option>Aujourd’hui</option>
+                    <option>7 jours</option>
+                    <option>30 jours</option>
+                </select>
+                <button class="btn-outline">Exporter</button>
+                </div>
+            </header>
+
+            <div class="cards">
+                <article class="card">
+                <h4>Score du jour</h4>
+                <div class="value">42 <span>/100</span></div>
+                <p class="sub ok">Modéré</p>
+                </article>
+                <article class="card">
+                <h4>Tendance</h4>
+                <div class="sparkline">
+                    <svg viewBox="0 0 100 24" preserveAspectRatio="none">
+                    <polyline points="0,14 10,15 20,12 30,10 40,9 50,12 60,13 70,11 80,9 90,8 100,7" />
+                    </svg>
+                </div>
+                <p class="sub">Moins de pics cette semaine</p>
+                </article>
+                <article class="card">
+                <h4>Recommandation</h4>
+                <p>Essayez 10 min de respiration ou une courte marche.</p>
+                </article>
+            </div>
+            </div>
+
+            <!-- Panneau : Sommeil -->
+            <div id="panel-sleep" class="panel" role="region" aria-label="Sommeil">
+            <header class="panel-header">
+                <h3>Sommeil</h3>
+                <div class="actions">
+                <select class="range">
+                    <option>Dernière nuit</option>
+                    <option>7 jours</option>
+                    <option>30 jours</option>
+                </select>
+                <button class="btn-outline">Exporter</button>
+                </div>
+            </header>
+
+            <div class="cards">
+                <article class="card">
+                <h4>Durée totale</h4>
+                <div class="value">7 h 35</div>
+                <p class="sub ok">Objectif : 7–9 h</p>
+                </article>
+                <article class="card">
+                <h4>Sommeil profond</h4>
+                <div class="value">1 h 20</div>
+                <p class="sub">Latence : 22 min</p>
+                </article>
+                <article class="card">
+                <h4>Réveils</h4>
+                <div class="value">2</div>
+                <p class="sub">Total interrompu : 8 min</p>
+                </article>
+            </div>
+            </div>
+
+            <!-- Panneau : Calories -->
+            <div id="panel-calories" class="panel" role="region" aria-label="Calories">
+            <header class="panel-header">
+                <h3>Calories</h3>
+                <div class="actions">
+                <select class="range">
+                    <option>Aujourd’hui</option>
+                    <option>7 jours</option>
+                    <option>30 jours</option>
+                </select>
+                <button class="btn-outline">Exporter</button>
+                </div>
+            </header>
+
+            <div class="cards">
+                <article class="card">
+                <h4>Brûlées</h4>
+                <div class="value">1 980 <span>kcal</span></div>
+                <div class="progress"><div style="width: 66%"></div></div>
+                <p class="sub">Objectif activité : 3 × 30 min</p>
+                </article>
+                <article class="card">
+                <h4>Au repos</h4>
+                <div class="value">1 420 <span>kcal</span></div>
+                <p class="sub">Métabolisme de base</p>
+                </article>
+                <article class="card">
+                <h4>Ingestées (estim.)</h4>
+                <div class="value">2 150 <span>kcal</span></div>
+                <p class="sub warn">Surplus léger</p>
+                </article>
+            </div>
+            </div>
+
+            <!-- Panneau : Hydratation -->
+            <div id="panel-hydration" class="panel" role="region" aria-label="Hydratation">
+            <header class="panel-header">
+                <h3>Hydratation</h3>
+                <div class="actions">
+                <select class="range">
+                    <option>Aujourd’hui</option>
+                    <option>7 jours</option>
+                    <option>30 jours</option>
+                </select>
+                <button class="btn-outline">Exporter</button>
+                </div>
+            </header>
+
+            <div class="cards">
+                <article class="card">
+                <h4>Apports du jour</h4>
+                <div class="value">1,9 <span>L</span></div>
+                <div class="progress"><div style="width: 95%"></div></div>
+                <p class="sub ok">Objectif : 2 L</p>
+                </article>
+                <article class="card">
+                <h4>Moyenne semaine</h4>
+                <div class="value">1,7 <span>L</span></div>
+                <p class="sub">+0,2 L vs semaine dernière</p>
+                </article>
+                <article class="card">
+                <h4>Rappels</h4>
+                <p>Activez des rappels d’hydratation toutes les 2 h.</p>
+                </article>
+            </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <script>
+        const $data = document.getElementById('data');
+        if ($data) {
+        const items = $data.querySelectorAll('.menu-item');
+        const panels = $data.querySelectorAll('.panel');
+
+        items.forEach(btn => {
+            btn.addEventListener('click', () => {
+            // Activer item
+            items.forEach(i => i.classList.remove('active'));
+            btn.classList.add('active');
+            // Activer panneau ciblé
+            const target = $data.querySelector(btn.dataset.target);
+            panels.forEach(p => p.classList.remove('active'));
+            if (target) target.classList.add('active');
+            });
+        });
+        }
+    </script>
+    <footer>
+        <section id="top_footer">
+            <div id="Reseaux_sociaux">
+                <div id="Ecriture">
+                        <h1>Vous pouvez nous contacter</h1> 
+                        <p>Suivez-nous sur :</p>
+                </div>
+                <div id="Logo">
+                    <div id="LogoX">
+                        <a href="https://x.com/Cristiano"><img src="../media/pictures/X-filaire.svg" alt="Notre X"></a>
+                    </div>
+                    <div id="LogoFacebook">
+                        <a href="https://www.facebook.com/Cristiano/"><img src="../media/pictures/Facebook-filaire.svg" alt="Notre Facebook"></a>   
+                    </div>       
+                </div> 
+            </div>
+            <div id="Nous_Contacter">
+                <div id="Ecriture2">
+                    <h1>Nous sommes joignables</h1>
+                    <p>Par téléphone, sur place ou par courriel, choisissez !</p>     
+                </div>
+                <a id="Contacter" href="https://www.linkedin.com/in/thomas-claverie-abp/?originalSubdomain=fr" class="btn-contact">Nous contacter</a>
+            </div>
+
+        </section>
+        <section id="footer">
+            <div id="lien_utile">
+                <div class="colonne">
+                    <h4>Espace</h4>
+                    <ul id="espace"> 
+                        <li> Patient </li>
+                        <li> Professionnel de santé </li>
+
+                    </ul>
+                </div>
+                <div class="colonne">
+                    <h4>Informations</h4>
+                    <ul id="informations">
+                        <li> Mentions légales </li>
+                        <li> Plan du site </li>
+                        <li> Foire aux questions </li>
+                    </ul>
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div id="information">
+                <ul id="barre_navigation">
+                    <li>PRESSE</li>
+                    <li>EMPLOIS ET CARRIÈRES</li>
+                    <li>RECHERCHE ET STATISTIQUES</li>
+                    <li>INTERNATIONAL</li>
+                    <li>MARCHÉS PUBLICS</li>
+                </ul>
+            </div>
+
+        </section>
+        <div id="parseval">
+            <div id="un">
+                Copyright © 2025 ZenConnect.net
+            </div>
+            <div id="deux">
+                ZenConnect France
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>
