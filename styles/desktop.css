@@ -1,5 +1,4 @@
                                          /*Partie Header*/
-/* Style général (optionnel) */
 header {
     padding: 10px;
     background: #00a97a;
@@ -29,6 +28,10 @@ header {
     height: 50px;
     display: flex;
     align-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+
 }
 #Particuliers {
     border-left: 1px solid #eff3f1;
@@ -36,7 +39,10 @@ header {
     margin: 0;
     height: 50px;
     display: flex;
-    align-items: center;  
+    align-items: center;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 #Particuliers:hover {
   background-color: #0fb88a;
@@ -59,16 +65,23 @@ header {
 }
 #LogoAccueil {
     width: 80px;
+    margin-right: 10px;
+    margin-top: 2.5px;
 }
 #MonCompteLogo {
     width: 60px;
     margin-bottom: -5px;
+    margin-left: 20px;
 }
 #MonCompte {
     display: flex;
     margin-left: auto;
     flex-direction: column;
     margin-top: -20px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    margin-bottom: -15px;
 }
 #MonCompte:hover {
     color: #fff;
