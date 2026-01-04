@@ -532,3 +532,88 @@ button:focus-visible {
   text-align: right;
   margin-right: 20px;
 }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7faf9;
+    color: #1f2d2a;
+}
+
+#Uper-body {
+    min-height: 80vh;
+    padding: 80px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.Accroche {
+    max-width: 55%;
+}
+
+.Accroche > h1 {
+    color: #1fa67a;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.Liste-bouton {
+    margin-top: 20px;
+}
+
+.Liste h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #183c32;
+}
+
+.Liste p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #3f5f57;
+}
+
+.Liste ul {
+    padding-left: 20px;
+}
+
+.Liste li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #4a6b63;
+}
+
+.Liste li strong {
+    color: #1fa67a;
+}
+
+.Bouton {
+    margin-top: 35px;
+}
+
+.Espace-santé {
+    background-color: #1fa67a;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(31, 166, 122, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Espace-santé:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(31, 166, 122, 0.45);
+}
+#Espaceimage {
+    height: 400px;
+    justify-content: right;
+    display: flex;
+    margin-left: auto;
+}
